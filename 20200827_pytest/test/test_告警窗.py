@@ -11,4 +11,5 @@ from case import alarmView
 @pytest.mark.usefixtures('get_driver', 'open_url')
 @allure.feature('告警窗')
 class Test_告警窗:
-    @allure.story('修改')
+    @allure.story('修改告警状态')
+    @allure.title()

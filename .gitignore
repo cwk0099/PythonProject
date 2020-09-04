@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+20200821_selenium_20200827/__pycache__/
+20200827_pytest/case/alarmView/__pycache__/
+20200827_pytest/case/loginPage/__pycache__/
+20200827_pytest/test/__pycache__/
+20200827_pytest/test/allure-reports/plugins/jira/
+20200827_pytest/test/allure-reports/plugins/junit/
+20200827_pytest/test/allure-reports/plugins/trx/
+20200827_pytest/test/allure-reports/plugins/xctest/
+20200827_pytest/test/allure-reports/plugins/xray/
+20200827_pytest/test/allure-reports/plugins/xunit-xml/
+20200827_pytest/test/reports/
+20200827_pytest/method/__pycache__/
