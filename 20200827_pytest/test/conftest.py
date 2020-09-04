@@ -18,11 +18,12 @@ def get_driver():
 
 
 @pytest.fixture(scope='session')
-def open_url(request):
-    wd.get("192.168.0.237:3000")
+def open_url():
+    wd.get("http://192.168.0.237:3000")
     def close_driver():
         wd.quit()
-    request.addfinalizer(close_driver)
+    yield
+    close_driver()
 
 # 获取用例结果，若失败就截图并关联用例
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
@@ -49,7 +50,7 @@ def pytest_runtest_makereport(item, call):
             os.mkdir(file_purl)
         file_url = file_purl + name + '_' + pic_time + '.png'
         ## 截图保存
-        # bol = wd.get_screenshot_as_file(file_url)
+        bol = wd.get_screenshot_as_file(file_url)
         ## 读取图片为bytes文件并且附加到对应测试用例的报告上
         with allure.step("添加用例失败截图"):
             with open(file_url, mode='rb') as f:

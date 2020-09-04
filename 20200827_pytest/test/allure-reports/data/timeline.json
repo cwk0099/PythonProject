@@ -4,74 +4,35 @@
   "children" : [ {
     "name" : "LAPTOP-2LJAK55G",
     "children" : [ {
-      "name" : "17168-MainThread",
+      "name" : "18740-MainThread",
       "children" : [ {
-        "name" : "三级标题（用例标题）",
-        "uid" : "4ffaf469ce62b141",
-        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
-        "status" : "passed",
+        "name" : "未复归修改为复归",
+        "uid" : "126a96c74748c28f",
+        "parentUid" : "3099ef851bf1a44a23a2ce2411e9e149",
+        "status" : "broken",
         "time" : {
-          "start" : 1599189882453,
-          "stop" : 1599189884665,
-          "duration" : 2212
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "'密码不能为空'", "''", "'123'" ]
-      }, {
-        "name" : "三级标题（用例标题）",
-        "uid" : "82f24e371d47bd6f",
-        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1599189900304,
-          "stop" : 1599189902529,
-          "duration" : 2225
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "'密码长度不能少于6位'", "'123'", "'123'" ]
-      }, {
-        "name" : "三级标题（用例标题）",
-        "uid" : "fe1b98209490e180",
-        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1599189873148,
-          "stop" : 1599189875335,
-          "duration" : 2187
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "'用户名不能为'", "''", "''" ]
-      }, {
-        "name" : "三级标题（用例标题）",
-        "uid" : "db7230eae186f46f",
-        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1599189891380,
-          "stop" : 1599189893597,
-          "duration" : 2217
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "'用户名不能为空'", "'123'", "''" ]
-      }, {
-        "name" : "登陆成功",
-        "uid" : "35d4373b50d30d47",
-        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1599189909185,
-          "stop" : 1599189910419,
-          "duration" : 1234
+          "start" : 1599211770856,
+          "stop" : 1599211778329,
+          "duration" : 7473
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "7adb1e7d62125eaa",
+        "parentUid" : "3099ef851bf1a44a23a2ce2411e9e149",
+        "status" : "broken",
+        "time" : {
+          "start" : 1599211778784,
+          "stop" : 1599211788820,
+          "duration" : 10036
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'用户名不能为'", "''", "''" ]
       } ],
-      "uid" : "e8fca6a25087352690acf709c682ec8a"
+      "uid" : "3099ef851bf1a44a23a2ce2411e9e149"
     } ],
     "uid" : "939e5258d80aa9c984930434b28deee5"
   } ]

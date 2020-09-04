@@ -1,97 +1,41 @@
 {
-  "d7cfcf3543f6f1422b95bc46aaa768b1" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "4ffaf469ce62b141",
-      "status" : "passed",
-      "time" : {
-        "start" : 1599189882453,
-        "stop" : 1599189884665,
-        "duration" : 2212
-      }
-    } ]
-  },
   "df93cc147288ec10e3780aecbdaee548" : {
     "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
+      "failed" : 0,
+      "broken" : 1,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "fe1b98209490e180",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: assert '用户名不能为空' == '用户名不能为'\n  - 用户名不能为\n  + 用户名不能为空\n  ?       +",
+      "uid" : "7adb1e7d62125eaa",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[placeholder = \"请输入用户名\"]\"}\n  (Session info: chrome=84.0.4147.135)",
       "time" : {
-        "start" : 1599189873148,
-        "stop" : 1599189875335,
-        "duration" : 2187
+        "start" : 1599211778784,
+        "stop" : 1599211788820,
+        "duration" : 10036
       }
     } ]
   },
-  "77a2e2d70c9fd5fe5d98c35e192e9682" : {
+  "372fe768d5f8823d4ab5490765bc9b63" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "db7230eae186f46f",
-      "status" : "passed",
+      "uid" : "126a96c74748c28f",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'click'",
       "time" : {
-        "start" : 1599189891380,
-        "stop" : 1599189893597,
-        "duration" : 2217
-      }
-    } ]
-  },
-  "2720db2342a2daeb20b087b848fd292e" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "82f24e371d47bd6f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1599189900304,
-        "stop" : 1599189902529,
-        "duration" : 2225
-      }
-    } ]
-  },
-  "fb15948d6aaae322c546b5a3b6120599" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "35d4373b50d30d47",
-      "status" : "passed",
-      "time" : {
-        "start" : 1599189909185,
-        "stop" : 1599189910419,
-        "duration" : 1234
+        "start" : 1599211770856,
+        "stop" : 1599211778329,
+        "duration" : 7473
       }
     } ]
   }

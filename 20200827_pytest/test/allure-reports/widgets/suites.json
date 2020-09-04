@@ -1,15 +1,26 @@
 {
-  "total" : 1,
+  "total" : 2,
   "items" : [ {
+    "uid" : "cb87d88a9d2925857e981ff36db43385",
+    "name" : "test_告警窗",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
     "uid" : "89f259634a421725bb99b2cd22ab6a26",
     "name" : "test_登陆",
     "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
+      "failed" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 0,
       "unknown" : 0,
-      "total" : 5
+      "total" : 1
     }
   } ]
 }
