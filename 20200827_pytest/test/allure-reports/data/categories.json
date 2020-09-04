@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert '用户名不能为空' == '用户名不能为'\n  - 用户名不能为\n  + 用户名不能为空\n  ?       +",
+      "children" : [ {
+        "name" : "三级标题（用例标题）",
+        "uid" : "fe1b98209490e180",
+        "parentUid" : "13f874579193d74c16930af33d2ff859",
+        "status" : "failed",
+        "time" : {
+          "start" : 1599189873148,
+          "stop" : 1599189875335,
+          "duration" : 2187
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'用户名不能为'", "''", "''" ]
+      } ],
+      "uid" : "13f874579193d74c16930af33d2ff859"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

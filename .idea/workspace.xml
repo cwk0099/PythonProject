@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="724c599a-99ad-4a9c-85c9-00c5b703f556" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Thinkbook.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/.idea/20200821_selenium.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/Is_exist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/Selenium_CssSeletor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/Selenium_htmlSelector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/exercise01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/exercise02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/exercise03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/exercise04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/exercise05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/main_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200821_selenium_20200827/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/.idea/20200827_pytest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/case/alarmView/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/case/alarmView/editAlarm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/case/loginPage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/case/loginPage/login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/case/loginPage/loginFail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/method/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/method/ifExist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/attachments/ee6e11dbc7c4390b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/behaviors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/behaviors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/categories.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/packages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/suites.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/suites.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/test-cases/35d4373b50d30d47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/test-cases/4ffaf469ce62b141.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/test-cases/82f24e371d47bd6f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/test-cases/db7230eae186f46f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/test-cases/fe1b98209490e180.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/timeline.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/export/influxDbData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/export/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/export/prometheusData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/categories-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/duration-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/history-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/history.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/retry-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/behaviors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/packages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/screen-diff/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/screen-diff/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/behaviors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/categories-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/duration-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/duration.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/executors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/history-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/retry-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/severity.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/status-chart.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/suites.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-10_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-11_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-11_37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-11_38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/test_告警窗.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200827_pytest/test/test_登陆.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="022151fa-f74f-40af-bf5c-82dc2e71f796" />
+  <component name="ProjectId" id="1h1qyNcjKBfb7TVgcZvdew4Zuyi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="test_登陆" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20200827_pytest/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20200827_pytest/test/test_登陆.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_登陆" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="724c599a-99ad-4a9c-85c9-00c5b703f556" name="Default Changelist" comment="" />
+      <created>1599189201023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599189201023</updated>
+      <workItem from="1599189202068" duration="12000" />
+      <workItem from="1599189227152" duration="3442000" />
+      <workItem from="1599192687409" duration="8309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="653" y="314" key="#Custom_Plugin_Repositories" timestamp="1599189302317">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="653" y="314" key="#Custom_Plugin_Repositories/0.0.1549.831@0.0.1549.831" timestamp="1599189302317" />
+    <state x="230" y="71" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599189857479">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="230" y="71" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.831@0.0.1549.831" timestamp="1599189857479" />
+    <state x="530" y="205" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599204802874">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="530" y="205" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1549.831@0.0.1549.831" timestamp="1599204802874" />
+    <state x="642" y="316" key="Github.ShareDialog" timestamp="1599205288884">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="642" y="316" key="Github.ShareDialog/0.0.1549.831@0.0.1549.831" timestamp="1599205288884" />
+    <state x="541" y="35" key="Github.UntrackedFilesDialog" timestamp="1599205324169">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="541" y="35" key="Github.UntrackedFilesDialog/0.0.1549.831@0.0.1549.831" timestamp="1599205324169" />
+    <state width="1506" height="180" key="GridCell.Tab.0.bottom" timestamp="1599192674245">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1599192674245" />
+    <state width="1506" height="180" key="GridCell.Tab.0.center" timestamp="1599192674245">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1599192674245" />
+    <state width="1506" height="180" key="GridCell.Tab.0.left" timestamp="1599192674245">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1599192674245" />
+    <state width="1506" height="180" key="GridCell.Tab.0.right" timestamp="1599192674245">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1599192674245" />
+    <state width="1506" height="180" key="GridCell.Tab.1.bottom" timestamp="1599192674246">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1599192674246" />
+    <state width="1506" height="180" key="GridCell.Tab.1.center" timestamp="1599192674246">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1599192674246" />
+    <state width="1506" height="180" key="GridCell.Tab.1.left" timestamp="1599192674246">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1599192674246" />
+    <state width="1506" height="180" key="GridCell.Tab.1.right" timestamp="1599192674246">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="180" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1599192674246" />
+    <state x="274" y="68" width="966" height="710" key="SettingsEditor" timestamp="1599205227909">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="274" y="68" width="966" height="710" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1599205227909" />
+    <state x="367" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599205401587">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="367" y="145" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1599205401587" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject$test_.coverage" NAME="test_登陆 Coverage Results" MODIFIED="1599191142328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/20200827_pytest/test" />
+  </component>
+</project>

@@ -1,0 +1,132 @@
+{
+  "uid" : "82f24e371d47bd6f",
+  "name" : "三级标题（用例标题）",
+  "fullName" : "test_登陆.Test_登陆#test_tps300_UI0001_登陆失败",
+  "historyId" : "2720db2342a2daeb20b087b848fd292e",
+  "time" : {
+    "start" : 1599189900304,
+    "stop" : 1599189902529,
+    "duration" : 2225
+  },
+  "description" : "\n        用例描述\n        ",
+  "descriptionHtml" : "<pre><code>    用例描述\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "open_url",
+    "time" : {
+      "start" : 1599189896736,
+      "stop" : 1599189900303,
+      "duration" : 3567
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "quit_url",
+    "time" : {
+      "start" : 1599189900303,
+      "stop" : 1599189900303,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "quit_url::0",
+    "time" : {
+      "start" : 1599189902531,
+      "stop" : 1599189905652,
+      "duration" : 3121
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "minor"
+  }, {
+    "name" : "feature",
+    "value" : "登陆功能（一级标题）"
+  }, {
+    "name" : "story",
+    "value" : "二级标题（场景）"
+  }, {
+    "name" : "tag",
+    "value" : "high"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('open_url', 'quit_url')"
+  }, {
+    "name" : "suite",
+    "value" : "test_登陆"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_登陆"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-2LJAK55G"
+  }, {
+    "name" : "thread",
+    "value" : "17168-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_登陆"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "exword",
+    "value" : "'密码长度不能少于6位'"
+  }, {
+    "name" : "password",
+    "value" : "'123'"
+  }, {
+    "name" : "username",
+    "value" : "'123'"
+  } ],
+  "links" : [ {
+    "name" : "链接",
+    "url" : "链接",
+    "type" : "test_case"
+  }, {
+    "name" : "点击我跳转禅道",
+    "url" : "http://192.168.0.217/",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "minor",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "high", "@pytest.mark.usefixtures('open_url', 'quit_url')" ]
+  },
+  "source" : "82f24e371d47bd6f.json",
+  "parameterValues" : [ "'密码长度不能少于6位'", "'123'", "'123'" ]
+}

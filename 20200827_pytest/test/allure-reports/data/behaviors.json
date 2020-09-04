@@ -1,0 +1,82 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "登陆功能（一级标题）",
+    "children" : [ {
+      "name" : "二级标题（场景）",
+      "children" : [ {
+        "name" : "三级标题（用例标题）",
+        "uid" : "fe1b98209490e180",
+        "parentUid" : "ce4625f21d5f873c36cc25c67cd98fe1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1599189873148,
+          "stop" : 1599189875335,
+          "duration" : 2187
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'用户名不能为'", "''", "''" ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "4ffaf469ce62b141",
+        "parentUid" : "ce4625f21d5f873c36cc25c67cd98fe1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189882453,
+          "stop" : 1599189884665,
+          "duration" : 2212
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'密码不能为空'", "''", "'123'" ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "db7230eae186f46f",
+        "parentUid" : "ce4625f21d5f873c36cc25c67cd98fe1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189891380,
+          "stop" : 1599189893597,
+          "duration" : 2217
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'用户名不能为空'", "'123'", "''" ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "82f24e371d47bd6f",
+        "parentUid" : "ce4625f21d5f873c36cc25c67cd98fe1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189900304,
+          "stop" : 1599189902529,
+          "duration" : 2225
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'密码长度不能少于6位'", "'123'", "'123'" ]
+      } ],
+      "uid" : "ce4625f21d5f873c36cc25c67cd98fe1"
+    }, {
+      "name" : "管理员登录",
+      "children" : [ {
+        "name" : "登陆成功",
+        "uid" : "35d4373b50d30d47",
+        "parentUid" : "207972122cd28f720b071869975ab208",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189909185,
+          "stop" : 1599189910419,
+          "duration" : 1234
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "207972122cd28f720b071869975ab208"
+    } ],
+    "uid" : "314274b546703c59d0a2b72c4dc40a77"
+  } ]
+}

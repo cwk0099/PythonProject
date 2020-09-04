@@ -1,0 +1,78 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-2LJAK55G",
+    "children" : [ {
+      "name" : "17168-MainThread",
+      "children" : [ {
+        "name" : "三级标题（用例标题）",
+        "uid" : "4ffaf469ce62b141",
+        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189882453,
+          "stop" : 1599189884665,
+          "duration" : 2212
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'密码不能为空'", "''", "'123'" ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "82f24e371d47bd6f",
+        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189900304,
+          "stop" : 1599189902529,
+          "duration" : 2225
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'密码长度不能少于6位'", "'123'", "'123'" ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "fe1b98209490e180",
+        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1599189873148,
+          "stop" : 1599189875335,
+          "duration" : 2187
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'用户名不能为'", "''", "''" ]
+      }, {
+        "name" : "三级标题（用例标题）",
+        "uid" : "db7230eae186f46f",
+        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189891380,
+          "stop" : 1599189893597,
+          "duration" : 2217
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'用户名不能为空'", "'123'", "''" ]
+      }, {
+        "name" : "登陆成功",
+        "uid" : "35d4373b50d30d47",
+        "parentUid" : "e8fca6a25087352690acf709c682ec8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1599189909185,
+          "stop" : 1599189910419,
+          "duration" : 1234
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e8fca6a25087352690acf709c682ec8a"
+    } ],
+    "uid" : "939e5258d80aa9c984930434b28deee5"
+  } ]
+}

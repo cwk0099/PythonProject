@@ -1,0 +1,98 @@
+{
+  "d7cfcf3543f6f1422b95bc46aaa768b1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4ffaf469ce62b141",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599189882453,
+        "stop" : 1599189884665,
+        "duration" : 2212
+      }
+    } ]
+  },
+  "df93cc147288ec10e3780aecbdaee548" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fe1b98209490e180",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '用户名不能为空' == '用户名不能为'\n  - 用户名不能为\n  + 用户名不能为空\n  ?       +",
+      "time" : {
+        "start" : 1599189873148,
+        "stop" : 1599189875335,
+        "duration" : 2187
+      }
+    } ]
+  },
+  "77a2e2d70c9fd5fe5d98c35e192e9682" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "db7230eae186f46f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599189891380,
+        "stop" : 1599189893597,
+        "duration" : 2217
+      }
+    } ]
+  },
+  "2720db2342a2daeb20b087b848fd292e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "82f24e371d47bd6f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599189900304,
+        "stop" : 1599189902529,
+        "duration" : 2225
+      }
+    } ]
+  },
+  "fb15948d6aaae322c546b5a3b6120599" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "35d4373b50d30d47",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599189909185,
+        "stop" : 1599189910419,
+        "duration" : 1234
+      }
+    } ]
+  }
+}

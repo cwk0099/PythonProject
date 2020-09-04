@@ -1,0 +1,172 @@
+{
+  "uid" : "fe1b98209490e180",
+  "name" : "三级标题（用例标题）",
+  "fullName" : "test_登陆.Test_登陆#test_tps300_UI0001_登陆失败",
+  "historyId" : "df93cc147288ec10e3780aecbdaee548",
+  "time" : {
+    "start" : 1599189873148,
+    "stop" : 1599189875335,
+    "duration" : 2187
+  },
+  "description" : "\n        用例描述\n        ",
+  "descriptionHtml" : "<pre><code>    用例描述\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '用户名不能为空' == '用户名不能为'\n  - 用户名不能为\n  + 用户名不能为空\n  ?       +",
+  "statusTrace" : "self = <test.test_登陆.Test_登陆 object at 0x000001EBF3127700>\nopen_url = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"bb9d28c98689dd0020378d831bb2c8de\")>\nquit_url = None, username = '', password = '', exword = '用户名不能为'\n\n    @pytest.mark.parametrize('username,password,exword', [('', '', '用户名不能为'), ('123', '', '密码不能为空'),\n                                                          ('', '123', '用户名不能为空'), ('123', '123', '密码长度不能少于6位')\n                                                          ])\n    @allure.story(\"二级标题（场景）\")\n    @allure.title(\"三级标题（用例标题）\")\n    # 可用来跳转禅道\n    @allure.issue('http://192.168.0.217/', name='点击我跳转禅道')\n    @allure.testcase(\"链接\")\n    # 优先级可用mark或者severity：blocker（阻塞），critical（重要），normal（一般），minor（轻微），trivial（非常轻微）\n    # pytest -m 标签名：运行mark\n    # pytest --allure-severity=程度：运行severity\n    @pytest.mark.high\n    @allure.severity('minor')\n    def test_tps300_UI0001_登陆失败(self, open_url, quit_url, username, password, exword):\n        \"\"\"\n        用例描述\n        \"\"\"\n        # 调用Case中的logincheck\n        alert_text = loginPage.loginfail(username, password, open_url)\n        # 断言检查是否正确\n>       assert alert_text == exword\nE       AssertionError: assert '用户名不能为空' == '用户名不能为'\nE         - 用户名不能为\nE         + 用户名不能为空\nE         ?       +\n\ntest_登陆.py:35: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "open_url",
+    "time" : {
+      "start" : 1599189869584,
+      "stop" : 1599189873147,
+      "duration" : 3563
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "quit_url",
+    "time" : {
+      "start" : 1599189873147,
+      "stop" : 1599189873147,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        用例描述\n        ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '用户名不能为空' == '用户名不能为'\n  - 用户名不能为\n  + 用户名不能为空\n  ?       +",
+    "statusTrace" : "self = <test.test_登陆.Test_登陆 object at 0x000001EBF3127700>\nopen_url = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"bb9d28c98689dd0020378d831bb2c8de\")>\nquit_url = None, username = '', password = '', exword = '用户名不能为'\n\n    @pytest.mark.parametrize('username,password,exword', [('', '', '用户名不能为'), ('123', '', '密码不能为空'),\n                                                          ('', '123', '用户名不能为空'), ('123', '123', '密码长度不能少于6位')\n                                                          ])\n    @allure.story(\"二级标题（场景）\")\n    @allure.title(\"三级标题（用例标题）\")\n    # 可用来跳转禅道\n    @allure.issue('http://192.168.0.217/', name='点击我跳转禅道')\n    @allure.testcase(\"链接\")\n    # 优先级可用mark或者severity：blocker（阻塞），critical（重要），normal（一般），minor（轻微），trivial（非常轻微）\n    # pytest -m 标签名：运行mark\n    # pytest --allure-severity=程度：运行severity\n    @pytest.mark.high\n    @allure.severity('minor')\n    def test_tps300_UI0001_登陆失败(self, open_url, quit_url, username, password, exword):\n        \"\"\"\n        用例描述\n        \"\"\"\n        # 调用Case中的logincheck\n        alert_text = loginPage.loginfail(username, password, open_url)\n        # 断言检查是否正确\n>       assert alert_text == exword\nE       AssertionError: assert '用户名不能为空' == '用户名不能为'\nE         - 用户名不能为\nE         + 用户名不能为空\nE         ?       +\n\ntest_登陆.py:35: AssertionError",
+    "steps" : [ {
+      "name" : "添加用例失败截图",
+      "time" : {
+        "start" : 1599189875776,
+        "stop" : 1599189875778,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ee6e11dbc7c4390b",
+        "name" : "失败截图",
+        "source" : "ee6e11dbc7c4390b.png",
+        "type" : "image/png",
+        "size" : 34819
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "quit_url::0",
+    "time" : {
+      "start" : 1599189875779,
+      "stop" : 1599189878900,
+      "duration" : 3121
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "minor"
+  }, {
+    "name" : "feature",
+    "value" : "登陆功能（一级标题）"
+  }, {
+    "name" : "story",
+    "value" : "二级标题（场景）"
+  }, {
+    "name" : "tag",
+    "value" : "high"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('open_url', 'quit_url')"
+  }, {
+    "name" : "suite",
+    "value" : "test_登陆"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_登陆"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-2LJAK55G"
+  }, {
+    "name" : "thread",
+    "value" : "17168-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_登陆"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "exword",
+    "value" : "'用户名不能为'"
+  }, {
+    "name" : "password",
+    "value" : "''"
+  }, {
+    "name" : "username",
+    "value" : "''"
+  } ],
+  "links" : [ {
+    "name" : "链接",
+    "url" : "链接",
+    "type" : "test_case"
+  }, {
+    "name" : "点击我跳转禅道",
+    "url" : "http://192.168.0.217/",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "minor",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "high", "@pytest.mark.usefixtures('open_url', 'quit_url')" ]
+  },
+  "source" : "fe1b98209490e180.json",
+  "parameterValues" : [ "'用户名不能为'", "''", "''" ]
+}
