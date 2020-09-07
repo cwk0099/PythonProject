@@ -1,5 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Fri Sep 04 17:29:30 CST 2020","Fri Sep 04 17:29:38 CST 2020","7473","","test_告警窗","Test_告警窗","","","未复归修改为复归",""
-"broken","Fri Sep 04 17:29:38 CST 2020","Fri Sep 04 17:29:48 CST 2020","10036","","test_登陆","Test_登陆","","","三级标题（用例标题）","
-        用例描述
-        "
