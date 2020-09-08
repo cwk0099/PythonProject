@@ -1,10 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
 20200821_selenium_20200827/__pycache__/
-tps300ol/case/alarmView/__pycache__/
-tps300ol/case/loginPage/__pycache__/
+tps300ol/case/alarmView/
+tps300ol/case/loginPage/
 tps300ol/test/__pycache__/
 tps300ol/test/allure-reports/
 tps300ol/test/reports/
 tps300ol/method/__pycache__/
 tps300ol_ui_pytest/.idea/
 tps300ol_ui_pytest/.pytest_cache/
+tps300ol_ui_pytest/case/.pytest_cache/

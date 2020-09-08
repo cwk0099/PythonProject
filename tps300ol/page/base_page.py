@@ -1,8 +1,11 @@
 from selenium.webdriver.common.action_chains import ActionChains
-from tps300ol.method import *
+from method import *
 from time import sleep
 
+# 基本的Page,二次封装所有用例都要用到的方法，用多少写多少，如：元素定位，隐形等待，等待，获取文本等等
+# 之后所有的Page都要继承BasePage
 class BasePage:
+    # 构造方法，传递driver和隐形等待
     def __init__(self, driver):
         self.driver = driver
         self.driver.implicitly_wait(10)
@@ -33,14 +36,9 @@ class BasePage:
     def mouse_move(self, element):
         ActionChains(self.driver).move_to_element(
             element
-        )
+        ).perform()
 
-    def move_to_element(self, xpath):
-        return self.x_path(xpath)
-
-    def switch_to_element(self, selector):
-        return self.css_seletor(selector)
-
+    # 二次封装公共方法
     def exist_css_seletor(self, selector):
         return exist_cssSeletor(self.driver, selector)
 
@@ -48,13 +46,13 @@ class BasePage:
         return exist_xPath(self.driver, xpath)
 
     @staticmethod
-    def select_clean(select, options):
-        select_clean(select, options)
+    def select_clean(select, options, search):
+        select_clean(select, options, search)
 
     @staticmethod
     def input_text(element, text):
         element.send_keys(text)
 
     @staticmethod
-    def click(element):
+    def element_click(element):
         element.click()

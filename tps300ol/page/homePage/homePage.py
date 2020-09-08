@@ -1,9 +1,11 @@
 from ..base_page import BasePage
+from page.alarm_viewPage.alarm_viewPage import AlarmViewPage
 
 class HomePage(BasePage):
 
-    def switch_to_alarmView(self, xpath, seletor):
-        self.move_to_element(xpath)
+    def switch_to_alarmView(self, seletor, xpath):
+        self.mouse_move(self.css_seletor(seletor))
         self.wait(1)
-        self.click(self.switch_to_element(seletor))
-        self.wait(2)
+        self.element_click(self.x_path(xpath))
+        self.wait(1)
+        return AlarmViewPage(self.driver)

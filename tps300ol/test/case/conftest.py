@@ -20,6 +20,7 @@ def get_driver():
 @pytest.fixture(scope='session')
 def open_url():
     wd.get("http://192.168.0.237:3000")
+    wd.maximize_window()
     def close_driver():
         wd.quit()
     yield
@@ -45,7 +46,7 @@ def pytest_runtest_makereport(item, call):
         name = names[0]
         print(name + '用例执行失败')
         ## 检查图片父目录是否存在，若不存在则创建
-        file_purl = 'test_picture\\'
+        file_purl = '..\\test_picture\\'
         if not os.path.exists(file_purl):
             os.mkdir(file_purl)
         file_url = file_purl + name + '_' + pic_time + '.png'
