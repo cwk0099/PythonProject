@@ -1,9 +1,9 @@
 from selenium.common.exceptions import NoSuchElementException
 
 
-def exist_cssSeletor(wd, seletor):
+def exist_cssSelector(wd, selector):
     try:
-        wd.find_element_by_css_selector(seletor)
+        wd.find_element_by_css_selector(selector)
     except NoSuchElementException:
         return True
     else:

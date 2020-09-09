@@ -4,16 +4,16 @@ from ..homePage.homePage import HomePage
 # 登录模块的Page，继承BasePage，封装所用的到元素、方法和步骤，三者分开
 class LoginPage(BasePage):
     def user_name(self):
-        return self.css_seletor('input[placeholder = "请输入用户名"]')
+        return self.css_selector('input[placeholder = "请输入用户名"]')
 
     def user_password(self):
-        return self.css_seletor('input[placeholder = "请输入密码"]')
+        return self.css_selector('input[placeholder = "请输入密码"]')
 
     def err_msg(self):
-        return self.css_seletor('div.el-message')
+        return self.css_selector('div.el-message')
 
     def login_btn(self):
-        return self.x_path('//span[contains(text(),"登录")]')
+        return self.xpath('//span[contains(text(),"登录")]')
 
 # 用例步骤，用前面说封装的方法和步骤，进行步骤的编写
     def login_fail(self, username, password):

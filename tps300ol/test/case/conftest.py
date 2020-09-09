@@ -8,14 +8,12 @@ import re
 
 sys.path.append(os.getcwd())
 
-
 # 前置函数，创建driver并且打开链接
 @pytest.fixture(scope='session')
 def get_driver():
     global wd
     wd = webdriver.Chrome()
     return wd
-
 
 @pytest.fixture(scope='session')
 def open_url():

@@ -14,17 +14,33 @@ class BasePage:
     def wait(second):
         sleep(second)
 
-    def css_seletors(self, selector):
+    def css_selectors(self, selector):
         return self.driver.find_elements_by_css_selector(selector)
 
-    def x_paths(self, xpath):
+    def xpaths(self, xpath):
         return self.driver.find_elements_by_xpath(xpath)
 
-    def css_seletor(self, selector):
+    def css_selector(self, selector):
         return self.driver.find_element_by_css_selector(selector)
 
-    def x_path(self, xpath):
+    def xpath(self, xpath):
         return self.driver.find_element_by_xpath(xpath)
+
+    @staticmethod
+    def son_css_selector(element, selector):
+        return element.find_element_by_css_selector(selector)
+
+    @staticmethod
+    def son_css_selectors(element, selector):
+        return element.find_elements_by_css_selector(selector)
+
+    @staticmethod
+    def son_xpath(element, xpath):
+        return element.find_element_by_xpath(xpath)
+
+    @staticmethod
+    def son_xpaths(element, xpath):
+        return element.find_elements_by_xpath(xpath)
 
     @staticmethod
     def get_text(element):
@@ -39,8 +55,8 @@ class BasePage:
         ).perform()
 
     # 二次封装公共方法
-    def exist_css_seletor(self, selector):
-        return exist_cssSeletor(self.driver, selector)
+    def exist_css_selector(self, selector):
+        return exist_cssSelector(self.driver, selector)
 
     def exist_xpath(self, xpath):
         return exist_xPath(self.driver, xpath)
@@ -56,3 +72,7 @@ class BasePage:
     @staticmethod
     def element_click(element):
         element.click()
+
+    @staticmethod
+    def check_tableList(options, options_name, status):
+        return table_options(options, options_name, status)
