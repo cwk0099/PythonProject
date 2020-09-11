@@ -13,12 +13,12 @@ sys.path.append(os.getcwd())
 def get_driver():
     global wd
     wd = webdriver.Chrome()
+    wd.maximize_window()
     return wd
 
 @pytest.fixture(scope='session')
 def open_url():
     wd.get("http://192.168.0.237:3000")
-    wd.maximize_window()
     def close_driver():
         wd.quit()
     yield

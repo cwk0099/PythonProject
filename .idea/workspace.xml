@@ -1,81 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="87ed2789-3d03-409a-9f34-337546b2e5f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="87ed2789-3d03-409a-9f34-337546b2e5f5" name="Default Changelist" comment="20200907">
+      <change afterPath="$PROJECT_DIR$/tps300ol/page/alarm_viewPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Thinkbook.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/.idea/20200827_pytest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/case/alarmView/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/case/alarmView/editAlarm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/case/alarmView/selectClean.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/case/loginPage/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/case/loginPage/login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/case/loginPage/loginFail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/method/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/method/ifExist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/behaviors.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/categories.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/packages.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/suites.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/data/timeline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/export/influxDbData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/export/mail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/export/prometheusData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/history.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/history/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/behaviors/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/packages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/screen-diff/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/plugins/screen-diff/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/duration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/environment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/executors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/severity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/status-chart.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/allure-reports/widgets/summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/pytest.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-10_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-11_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-11_37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/test_picture/test_tps300_UI0001_登陆失败_2020-09-04-11_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/test_告警窗.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200827_pytest/test/test_登陆.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200821_selenium_20200827/exercise04.py" beforeDir="false" afterPath="$PROJECT_DIR$/20200821_selenium_20200827/exercise04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/method/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/method/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/method/ifExist.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/method/ifExist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/method/options_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/method/options_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/alarm_viewPage/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/alarm_viewPage/alarm_viewPage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/page/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/homePage/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/homePage/homePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/page/homePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/loginPage/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/page/loginPage/loginPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/page/loginPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/test/case/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/test/case/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/test/case/test_tps300_A01_登陆.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/test/case/test_tps300_A01_登陆.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/test/case/test_tps300_B02_告警窗.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps300ol/test/case/test_tps300_A02_告警窗.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tps300ol/test/test_picture/test_tps300_B02_UI01_修改告警表格_2020-09-08-17_16.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="022151fa-f74f-40af-bf5c-82dc2e71f796" />
   <component name="ProjectId" id="1hAsMF4cwcrCUZwG9wcyWfuC3N6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="新增" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -83,9 +70,182 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tps300ol/test/test_登陆.py" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="PythonProject" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="PythonProject" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PythonProject\tps300ol\page" />
+      <recent name="D:\PythonProject\tps300ol" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python 测试.pytest in test_tps300_A02_告警窗.py">
+    <configuration name="test_登陆" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tps300ol/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tps300ol/test/test_登陆.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tps300ol/test/test_登陆.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tps300ol/test/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI02_修改告警表格" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tps300ol/test/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI02_修改告警表格&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for case.test_tps300_B02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;case.test_tps300_B02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in D:/PythonProject/tps300ol/test/test_登陆.py" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tps300ol/test/test_登陆.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_tps300_A02_告警窗.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\tools\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tps300ol/test/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tps300ol/test/case/test_tps300_A02_告警窗.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test_登陆" />
+      <item itemvalue="Python 测试.pytest in D:/PythonProject/tps300ol/test/test_登陆.py" />
+      <item itemvalue="Python 测试.pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示" />
+      <item itemvalue="Python 测试.pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI02_修改告警表格" />
+      <item itemvalue="Python 测试.pytest in test_tps300_A02_告警窗.py" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python 测试.pytest in test_tps300_A02_告警窗.py" />
+        <item itemvalue="Python 测试.pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示" />
+        <item itemvalue="Python 测试.pytest for case.test_tps300_A02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI02_修改告警表格" />
+        <item itemvalue="Python.test_登陆" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -95,17 +255,132 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599465180581</updated>
-      <workItem from="1599465181673" duration="50000" />
+      <workItem from="1599465181673" duration="2736000" />
+      <workItem from="1599467953336" duration="904000" />
+      <workItem from="1599644456146" duration="2597000" />
+      <workItem from="1599699393122" duration="1165000" />
+      <workItem from="1599700574793" duration="44129000" />
     </task>
+    <task id="LOCAL-00001" summary="20200907">
+      <created>1599465423284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599465423284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20200907" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200907" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="284" y="60" key="SettingsEditor" timestamp="1599465231278">
+    <state x="230" y="0" width="1089" height="831" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599707838314">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="284" y="60" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1599465231278" />
+    <state x="230" y="0" width="1089" height="831" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.831@0.0.1549.831" timestamp="1599707838314" />
+    <state x="555" y="121" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1599468093025">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="555" y="121" key="#com.intellij.ide.macro.MacrosDialog/0.0.1549.831@0.0.1549.831" timestamp="1599468093025" />
+    <state x="505" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1599707831853">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="505" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1549.831@0.0.1549.831" timestamp="1599707831853" />
+    <state x="526" y="250" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1599702577215">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="526" y="250" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1549.831@0.0.1549.831" timestamp="1599702577215" />
+    <state x="555" y="157" key="FileChooserDialogImpl" timestamp="1599468800112">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="555" y="157" key="FileChooserDialogImpl/0.0.1549.831@0.0.1549.831" timestamp="1599468800112" />
+    <state width="1506" height="185" key="GridCell.Tab.0.bottom" timestamp="1599805677659">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1599805677659" />
+    <state width="1506" height="185" key="GridCell.Tab.0.center" timestamp="1599805677659">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1599805677659" />
+    <state width="1506" height="185" key="GridCell.Tab.0.left" timestamp="1599805677659">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1599805677659" />
+    <state width="1506" height="185" key="GridCell.Tab.0.right" timestamp="1599805677659">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1599805677659" />
+    <state width="1506" height="185" key="GridCell.Tab.1.bottom" timestamp="1599805717286">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1599805717286" />
+    <state width="1506" height="185" key="GridCell.Tab.1.center" timestamp="1599805717286">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1599805717286" />
+    <state width="1506" height="185" key="GridCell.Tab.1.left" timestamp="1599805717286">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1599805717286" />
+    <state width="1506" height="185" key="GridCell.Tab.1.right" timestamp="1599805717286">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1506" height="185" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1599805717286" />
+    <state x="196" y="35" width="981" height="707" key="SettingsEditor" timestamp="1599709476048">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="196" y="35" width="981" height="707" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1599709476048" />
+    <state x="367" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599465429082">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="367" y="145" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1599465429082" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tps300ol/page/alarm_viewPage.py</url>
+          <line>235</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tps300ol/page/alarm_viewPage.py</url>
+          <line>237</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tps300ol/test/case/test_tps300_A03_事件窗.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_for_case_test_tps300_B02__Test_tps300_B02__test_tps300_B02_UI01_.coverage" NAME="pytest for case.test_tps300_B02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示 Coverage Results" MODIFIED="1599708295195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_in_test__py.coverage" NAME="pytest in test_登陆.py Coverage Results" MODIFIED="1599467765036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test" />
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_for_test__Test_A__test_tps300_A_UI001_.coverage" NAME="pytest for test_登陆.Test_A_登陆.test_tps300_A_UI001_登陆失败 Coverage Results" MODIFIED="1599466833250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test" />
+    <SUITE FILE_PATH="coverage/PythonProject$test_.coverage" NAME="test_登陆 Coverage Results" MODIFIED="1599468815492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test" />
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_in_test_tps300_A02__py.coverage" NAME="pytest in test_tps300_A02_告警窗.py Coverage Results" MODIFIED="1599805677489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test/case" />
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_for_test_tps300_B02__Test_tps300_B02__test_tps300_B02_UI02_.coverage" NAME="pytest for test_tps300_B02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI02_修改告警表格 Coverage Results" MODIFIED="1599710206830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test/case" />
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_for_test_tps300_B02__Test_tps300_B02__test_tps300_B02_UI01_.coverage" NAME="pytest for test_tps300_B02_告警窗.Test_tps300_B02_告警窗.test_tps300_B02_UI01_检查查询栏展示 Coverage Results" MODIFIED="1599719921145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test/case" />
+    <SUITE FILE_PATH="coverage/PythonProject$pytest_for_test__Test_A_.coverage" NAME="pytest for test_登陆.Test_A_登陆 Coverage Results" MODIFIED="1599466625595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tps300ol/test" />
   </component>
 </project>

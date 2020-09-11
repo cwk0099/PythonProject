@@ -1,4 +1,3 @@
-from selenium import webdriver
 
 
 def print_menu(wd):
