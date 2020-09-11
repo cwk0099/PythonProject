@@ -9,3 +9,9 @@ tps300ol/method/__pycache__/
 tps300ol_ui_pytest/.idea/
 tps300ol_ui_pytest/.pytest_cache/
 tps300ol_ui_pytest/case/.pytest_cache/
+tps300ol/__pycache__/
+tps300ol/page/__pycache__/
+tps300ol/test/case/__pycache__/
+tps300ol/test/case/allure-reports/
+tps300ol/test/case/main_test.py
+tps300ol/test/case/reports/

@@ -17,14 +17,29 @@ class Test_TPS300_A03_事件窗:
         login_page = loginPage.LoginPage(get_driver)
         home_page = login_page.login_success('admin', '123456')
         event_page = home_page.switch_to_eventView()
-        assert event_page.check_showed_options()
+        bol = event_page.search_show_check()
+        assert bol
+
+    @allure.story('修改事件表格')
+    @allure.title('增加/隐藏事件表格列，不保存')
+    def test_tps300_A03_UI02_表格列展示(self, get_driver):
+        event_page = eventPage.EventPage(get_driver)
+        bol = event_page.table_list_check()
+        assert bol
+
+    @allure.story('修改事件列表')
+    @allure.title('增加/隐藏事件表格列并保存')
+    def test_tps300_A03_UI03_编辑表格列保存(self, get_driver):
+        event_page = eventPage.EventPage(get_driver)
+        bol = event_page.list_save_check()
+        assert bol
 
 
 if __name__ == '__main__':
     # pytest.main(['-s'])
     # 执行用例，且每次运行都清空用例结果数据
     pytest.main(
-        ['-s', '-q', '-k test_tps300_A03_事件窗.py', '--instafail --tb=line', '--return 2 --returns-delay 1',
+        ['-s', '-q', '-k test_tps300_A03_事件窗.py', '--instafail', '--tb=line', '--reruns=2', '--reruns-delay=1',
          '--alluredir', './reports', '--clean-alluredir'])
     # 生成报告，每次执行都清空数据
     os.system('allure generate reports -o allure-reports --clean')

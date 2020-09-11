@@ -6,11 +6,13 @@ def option_names(options, options_name, status):
         op_status = option.get_attribute('class')
         if status == 'is-checked':
             if status in op_status:
-                names.append(options_name[index].text)
+                text = options_name[index].text
+                names.append(text)
                 option.click()
         else:
             if status == op_status:
-                names.append(options_name[index].text)
+                text = options_name[index].text
+                names.append(text)
                 option.click()
         index += 1
     return names

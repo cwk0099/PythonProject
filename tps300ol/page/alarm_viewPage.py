@@ -113,18 +113,18 @@ class AlarmViewPage(BasePage):
     # 查询选择检操作步骤
     def search_show_check(self):
         self.element_click(self.search_show_btn())
-        options = self.search_show_options()
-        names = self.search_show_name()
-        checked_names = self.check_lists(options, names, 'is-checked')
+        options_1 = self.search_show_options()
+        names_1 = self.search_show_name()
+        checked_names_1 = self.check_lists(options_1, names_1, 'is-checked')
         c = 0
         if self.check_showed_list():
-            check_names = self.search_showed_names()
+            check_names_1 = self.search_showed_names()
         else:
-            check_names = list()
+            check_names_1 = list()
         ci = 0
         i = 0
-        for index, checked_name in enumerate(checked_names):
-            if checked_name not in check_names:
+        for index, checked_name_1 in enumerate(checked_names_1):
+            if checked_name_1 not in check_names_1:
                 ci += 1
             i = index
         if ci == (i + 1):
@@ -132,14 +132,14 @@ class AlarmViewPage(BasePage):
         self.page_refresh()
         self.wait(1)
         self.element_click(self.search_show_btn())
-        options = self.search_show_options()
-        names = self.search_show_name()
-        checked_names = self.check_lists(options, names, 'el-checkbox')
-        check_names = self.search_showed_names()
+        options_11 = self.search_show_options()
+        names_11 = self.search_show_name()
+        checked_names_11 = self.check_lists(options_11, names_11, 'el-checkbox')
+        check_names_11 = self.search_showed_names()
         ci = 0
         i = 0
-        for index, checked_name in enumerate(checked_names):
-            if checked_name in check_names:
+        for index, checked_name in enumerate(checked_names_11):
+            if checked_name_11 in check_names_11:
                 ci += 1
             i = index
         if ci == (i + 1):
@@ -153,29 +153,29 @@ class AlarmViewPage(BasePage):
     def table_list_check(self):
         self.element_click(self.table_list()[0])
         self.wait(1)
-        options = self.table_list_options()
-        names = self.table_list_names()
-        list_names = self.check_lists(options, names, 'is-checked')
-        table_lists = self.table_list()
-        del (table_lists[0])
-        table_list_names = self.list_names(table_lists)
+        options_2 = self.table_list_options()
+        names_2 = self.table_list_names()
+        list_names_2 = self.check_lists(options_2, names_2, 'is-checked')
+        table_lists_2 = self.table_list()
+        del (table_lists_2[0])
+        table_list_names_2 = self.list_names(table_lists_2)
         i = 0
         index = 0
         k = 0
-        for list_name in list_names:
-            if list_name not in table_list_names:
+        for list_name_2 in list_names_2:
+            if list_name_2 not in table_list_names_2:
                 i += 1
             index += 1
         if i == index:
             k += 1
-        list_names1 = self.check_lists(options, names, 'el-checkbox')
-        table_lists1 = self.table_list()
-        del (table_lists1[0])
-        table_list1_names = self.list_names(table_lists1)
+        list_names_21 = self.check_lists(options_2, names_2, 'el-checkbox')
+        table_lists_21 = self.table_list()
+        del (table_lists_21[0])
+        table_list_names_21 = self.list_names(table_lists_21)
         i1 = 0
         index = 0
-        for list_name1 in list_names1:
-            if list_name1 in table_list1_names:
+        for list_name_21 in list_names_21:
+            if list_name_21 in table_list_names_21:
                 i1 += 1
             index += 1
         if i1 == index:
@@ -190,34 +190,34 @@ class AlarmViewPage(BasePage):
         # edit_btn = self.table_list()[0]
         # self.element_click(edit_btn)
         # self.wait(1)
-        options = self.table_list_options()
-        names = self.table_list_names()
-        checked_name = self.check_list(options, names, 'is-checked')
+        options_3 = self.table_list_options()
+        names_3 = self.table_list_names()
+        checked_name_3 = self.check_list(options_3, names_3, 'is-checked')
         save_btn = self.list_save_btn()
         self.element_click(save_btn)
         self.wait(1)
         confirm_btn = self.list_confirm_btn()
         self.element_click(confirm_btn)
         self.page_refresh()
-        table_list = self.table_list()
-        del (table_list[0])
-        list_names = self.list_names(table_list)
+        table_list_3 = self.table_list()
+        del (table_list_3[0])
+        list_names_3 = self.list_names(table_list_3)
         k = 0
-        if checked_name not in list_names:
+        if checked_name_3 not in list_names_3:
             k += 1
         self.element_click(self.table_list()[0])
-        options = self.table_list_options()
-        names = self.table_list_names()
-        checked_name = self.check_list(options, names, 'el-checkbox')
+        options_31 = self.table_list_options()
+        names_31 = self.table_list_names()
+        checked_name_31 = self.check_list(options_31, names_31, 'el-checkbox')
         save_btn = self.list_save_btn()
         self.element_click(save_btn)
         confirm_btn = self.list_confirm_btn()
         self.element_click(confirm_btn)
         self.page_refresh()
-        table_list = self.table_list()
-        del (table_list[0])
-        list_names = self.list_names(table_list)
-        if checked_name in list_names:
+        table_list_31 = self.table_list()
+        del (table_list_31[0])
+        list_names_31 = self.list_names(table_list_31)
+        if checked_name_31 in list_names_31:
             k += 1
         if k == 2:
             return True
@@ -229,8 +229,8 @@ class AlarmViewPage(BasePage):
         select = self.search_status()
         self.element_click(select)
         self.wait(1)
-        options = self.select_status()
-        self.element_click(options[s])
+        options_4 = self.select_status()
+        self.element_click(options_4[s])
         search = self.search_btn()
         self.element_click(search)
         self.wait(1)
@@ -241,7 +241,7 @@ class AlarmViewPage(BasePage):
             self.element_click(self.confirm_btn())
             self.wait(1)
             text = self.get_text(self.alert_text())
-            self.select_clean(select, options, search)
+            self.select_clean(select, options_4, search)
             exword = self.edit_success()
             b = bool(text == exword)
             if b:
