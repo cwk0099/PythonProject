@@ -138,7 +138,7 @@ class AlarmViewPage(BasePage):
         check_names_11 = self.search_showed_names()
         ci = 0
         i = 0
-        for index, checked_name in enumerate(checked_names_11):
+        for index, checked_name_11 in enumerate(checked_names_11):
             if checked_name_11 in check_names_11:
                 ci += 1
             i = index

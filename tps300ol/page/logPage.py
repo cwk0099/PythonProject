@@ -1,9 +1,9 @@
-from page.base_page import BasePage
+from .base_page import BasePage
 
-class EventPage(BasePage):
+class LogPage(BasePage):
     # 查询列表展示选择按钮
     def search_select_btn(self):
-        return self.xpath('/html/body/section/main/section/header/form/div[6]/div/div/span/button')
+        return self.css_selector('div > div > span > button')
 
     # 查询列表选择选项
     def search_select_options(self):
@@ -88,9 +88,9 @@ class EventPage(BasePage):
             i = index
         if ci == (i + 1):
             c += 1
-        self.page_refresh()
-        self.wait(1)
-        self.element_click(self.search_select_btn())
+        # self.page_refresh()
+        # self.wait(1)
+        # self.element_click(self.search_select_btn())
         options_11 = self.search_select_options()
         names_11 = self.search_select_names()
         checked_names_11 = self.check_lists(options_11, names_11, 'el-checkbox')
@@ -129,7 +129,7 @@ class EventPage(BasePage):
         list_names_21 = self.check_lists(options_2, names_2, 'el-checkbox')
         table_lists_21 = self.table_list()
         table_list_names_21 = self.list_names(table_lists_21)
-        del(table_list_names_21[0])
+        del (table_list_names_21[0])
         i1 = 0
         index = 0
         for list_name_21 in list_names_21:
@@ -157,11 +157,9 @@ class EventPage(BasePage):
         self.element_click(confirm_btn)
         alert_text_1 = self.alert_text()
         self.wait(1)
-        text_1 = self.get_text(alert_text_1)
-        if text_1 != self.edit_success():
+        if self.get_text(alert_text_1) != self.edit_success():
             print('修改失败')
             return False
-        self.wait(1)
         self.page_refresh()
         table_list_3 = self.table_list()
         list_names_3 = self.list_names(table_list_3)
@@ -178,11 +176,9 @@ class EventPage(BasePage):
         self.element_click(confirm_btn)
         alert_text = self.alert_text()
         self.wait(1)
-        text = self.get_text(alert_text)
-        if text != self.edit_success():
+        if self.get_text(alert_text) != self.edit_success():
             print('修改失败')
             return False
-        self.wait(1)
         self.page_refresh()
         table_list_31 = self.table_list()
         list_names_31 = self.list_names(table_list_31)

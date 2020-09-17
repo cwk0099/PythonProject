@@ -6,6 +6,7 @@ import pytest
 sys.path.append(os.getcwd())
 from page import loginPage
 
+
 # 使用前后置函数来获取driver和打开网址
 @pytest.mark.usefixtures('get_driver', 'open_url')
 # 功能
@@ -33,7 +34,7 @@ class Test_TPS300_A01_登陆:
         # 调用对应Page中的方法
         alert_text = login_page.login_fail(username, password)
         # 断言检查是否正确
-        assert alert_text == exword
+        pytest.assume(alert_text == exword)
 
     @allure.title('登陆成功')
     @allure.story('管理员登录')
@@ -42,13 +43,17 @@ class Test_TPS300_A01_登陆:
         login_page = loginPage.LoginPage(get_driver)
         # 实例化主页的Page，这里是用登录Page中的方法返回的值来实例化
         home_page = login_page.login_success('admin', '123456')
-        assert home_page.get_url() == 'http://192.168.0.237:3000/'
+        pytest.assume(home_page.get_url() == 'http://192.168.0.237:3000/')
 
 
 # main函数运行
 if __name__ == '__main__':
     # pytest.main(['-s'])
     # 执行用例，且每次运行都清空用例结果数据
+    # -k：指定运行某一个文件
+    # --instafail --tb=line，调试时候用，打印详细错误信息，遇到用例失败会停止，pytest-instafail插件
+    # --reruns=2 --reruns-delay=1 ，用例失败重新运行该用例两次，并且每次间隔一秒，pytest-rerunsfailures插件
+    # --alluredir ./reports --clean-alluredir ,pytest-allure插件，生成报告在上一层目录的report文件夹
     pytest.main(['-s', '-q', '-k test_tps300_A01_登陆.py', '--instafail --tb=line', '--return 2 --returns-delay 1',
                  '--alluredir', './reports', '--clean-alluredir'])
     # 生成报告，每次执行都清空数据

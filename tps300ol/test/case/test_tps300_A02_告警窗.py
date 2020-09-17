@@ -18,7 +18,7 @@ class Test_TPS300_A02_告警窗:
         home_page = login_page.login_success('admin', '123456')
         alarm_page = home_page.switch_to_alarmView()
         bol = alarm_page.search_show_check()
-        assert bol
+        pytest.assume(bol)
 
     @allure.story('修改告警表格')
     @allure.title('增加/隐藏告警表格列')
@@ -31,9 +31,9 @@ class Test_TPS300_A02_告警窗:
         alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
         if alarm_page.get_url() != 'http://192.168.0.237:3000/main/alarm':
             print(f'页面跳转错误，目前页面为{alarm_page.get_url()}')
-            assert 1 == 0
+            pytest.assume(1 == 0)
         bol = alarm_page.table_list_check()
-        assert bol
+        pytest.assume(bol)
 
     @allure.story('修改告警表格')
     @allure.title('修改告警表格列表保存')
@@ -46,10 +46,10 @@ class Test_TPS300_A02_告警窗:
         alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
         if alarm_page.get_url() != 'http://192.168.0.237:3000/main/alarm':
             print(f'页面跳转错误，目前页面为{alarm_page.get_url()}')
-            assert 1 == 0
+            pytest.assume(1 == 0)
         alarm_page.wait(1)
         bol = alarm_page.list_save_check()
-        assert bol
+        pytest.assume(bol)
 
     @allure.story('修改告警状态')
     @allure.title('未复归修改为复归')
@@ -60,7 +60,7 @@ class Test_TPS300_A02_告警窗:
         # home_page = login_page.login_success('admin', '123456')
         alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
         bol = alarm_page.edit_status(0)
-        assert bol
+        pytest.assume(bol)
 
     @allure.story('修改告警状态')
     @allure.title('未复归修改为复归')
@@ -68,10 +68,10 @@ class Test_TPS300_A02_告警窗:
     @pytest.mark.high
     def test_tps300_A02_UI06_复归修改为未复归用例(self, get_driver):
         # login_page = loginPage.LoginPage(get_driver)
-        # home_page = login_page.login_success('admin', '123456')
+        # home_page = login_page.login_success('admin1', '123456')
         alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
         bol = alarm_page.edit_status(1)
-        assert bol
+        pytest.assume(bol)
 
 
 if __name__ == '__main__':
