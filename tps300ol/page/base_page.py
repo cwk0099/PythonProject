@@ -1,4 +1,6 @@
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+
 from method import *
 from time import sleep
 
@@ -27,7 +29,7 @@ class BasePage:
     def css_selector(self, selector):
         return self.driver.find_element_by_css_selector(selector)
 
-    # 使用xpath选择一，封装了selenium的方法
+    # 使用xpath选择一个，封装了selenium的方法
     def xpath(self, xpath):
         return self.driver.find_element_by_xpath(xpath)
 
@@ -90,6 +92,10 @@ class BasePage:
     def page_refresh(self):
         self.driver.refresh()
 
+    # 二次封装selenium的execute_script方法，实现页面滚动至某元素可见
+    def page_scroll(self, ele):
+        self.driver.execute_script("arguments[0].scrollIntoView();", ele)
+
     # 二次封装公共方法，传入表格编辑选项、名称和选项的class，返回被选中或者未选中的选项的名称的列表
     @staticmethod
     def check_lists(options, options_name, status):
@@ -99,3 +105,85 @@ class BasePage:
     @staticmethod
     def check_list(options, options_name, status):
         return op_name(options, options_name, status)
+
+    def page_list(self):
+        return self.css_selectors('div > ul > li.number')
+
+    def back_btn(self):
+        return self.css_selector(' div > button.btn-prev')
+
+    def next_btn(self):
+        return self.css_selector(' div > button.btn-next')
+
+    def page_input(self):
+        return self.css_selector('span.el-pagination__jump > div > input')
+
+    def checked_number(self):
+        return self.css_selectors(' div.el-table__body-wrapper tr:nth-child(1) div')
+
+    def more_btn(self):
+        return self.css_selector('div > ul > li.more')
+
+    def page_turn(self):
+        s = len(self.page_list())
+        if s == 1:
+            self.input_text(self.page_input(), '2')
+            self.input_text(self.page_input(), Keys.ENTER)
+            if self.is_exist(self.checked_number(), 1):
+                c = self.get_text(self.checked_number()[0])
+            else:
+                c = []
+            if c == [] or c == '1':
+                return True
+        elif 4 >= s > 1:
+            self.input_text(self.page_input(), f'{s+1}')
+            self.input_text(self.page_input(), Keys.ENTER)
+            c1 = self.get_text(self.checked_number()[0])
+            k = 0
+            if c1 == f'{((s-1)*20)+1}':
+                k += 1
+            self.element_click(self.back_btn())
+            if self.get_text(self.checked_number()[0]) == '1':
+                k += 1
+            self.element_click(self.next_btn())
+            if self.get_text(self.checked_number()[0]) == '21':
+                k += 1
+            self.element_click(self.page_list()[0])
+            if self.get_text(self.checked_number()[0]) == '1':
+                k += 1
+            self.element_click(self.page_list()[1])
+            if self.get_text(self.checked_number()[0]) == '21':
+                k += 1
+            if k == 5:
+                return True
+            else:
+                return False
+        elif s > 4:
+            num = self.get_text(self.page_list()[4])
+            self.input_text(self.page_input(), num)
+            self.input_text(self.page_input(), Keys.ENTER)
+            num1 = int(num)
+            c2 = self.get_text(self.checked_number()[0])
+            k1 = 0
+            num2 = ((num1 - 1) * 20) + 1
+            if c2 == f'{num2}':
+                k1 += 1
+            self.element_click(self.back_btn())
+            if self.get_text(self.checked_number()[0]) == f'{num2-20}':
+                k1 += 1
+            self.element_click(self.next_btn())
+            if self.get_text(self.checked_number()[0]) == f'{num2}':
+                k1 += 1
+            self.element_click(self.page_list()[0])
+            if self.get_text(self.checked_number()[0]) == '1':
+                k1 += 1
+            self.element_click(self.page_list()[1])
+            if self.get_text(self.checked_number()[0]) == '21':
+                k1 += 1
+            self.element_click(self.more_btn())
+            if self.get_text(self.checked_number()[0]) == '81':
+                k1 += 1
+            if k1 == 6:
+                return True
+            else:
+                return False

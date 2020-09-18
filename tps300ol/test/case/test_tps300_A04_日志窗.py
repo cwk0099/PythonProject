@@ -4,8 +4,8 @@ import allure
 import pytest
 
 sys.path.append(os.getcwd())
-from page import loginPage
-from page import logPage
+from Home import loginPage
+from safe_general import logPage
 
 
 @pytest.mark.usefixtures('get_driver', 'open_url')
@@ -34,6 +34,12 @@ class Test_TPS300_A04_日志窗:
         bol = log_page.list_save_check()
         pytest.assume(bol)
 
+    @allure.story('翻页')
+    @allure.title('翻页')
+    def test_tps300_A04_UI04_翻页(self, get_driver):
+        log_page = logPage.LogPage(get_driver)
+        bol = log_page.page_turn()
+        pytest.assume(bol)
 
 if __name__ == '__main__':
     # pytest.main(['-s'])

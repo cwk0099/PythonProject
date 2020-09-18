@@ -3,8 +3,8 @@ import sys
 import allure
 import pytest
 sys.path.append(os.getcwd())
-from page import loginPage
-from page import alarm_viewPage
+from page.home import loginPage
+from page.safe_general import alarm_viewPage
 
 
 # 使用前后置函数
@@ -15,7 +15,7 @@ class Test_TPS300_A02_告警窗:
     @allure.title('增加/隐藏告警展示列')
     def test_tps300_A02_UI01_检查查询栏展示用例(self, get_driver):
         login_page = loginPage.LoginPage(get_driver)
-        home_page = login_page.login_success('admin', '123456')
+        home_page = login_page.login_success('admin1', '123456')
         alarm_page = home_page.switch_to_alarmView()
         bol = alarm_page.search_show_check()
         pytest.assume(bol)
@@ -55,7 +55,7 @@ class Test_TPS300_A02_告警窗:
     @allure.title('未复归修改为复归')
     @allure.issue('http://192.168.0.217/', name='禅道')
     @pytest.mark.high
-    def test_tps300_A02_UI05_未复归修改为复归用例(self, get_driver):
+    def test_tps300_A02_UI04_未复归修改为复归用例(self, get_driver):
         # login_page = loginPage.LoginPage(get_driver)
         # home_page = login_page.login_success('admin', '123456')
         alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
@@ -66,11 +66,20 @@ class Test_TPS300_A02_告警窗:
     @allure.title('未复归修改为复归')
     @allure.issue('http://192.168.0.217/', name='禅道')
     @pytest.mark.high
-    def test_tps300_A02_UI06_复归修改为未复归用例(self, get_driver):
+    def test_tps300_A02_UI05_复归修改为未复归用例(self, get_driver):
         # login_page = loginPage.LoginPage(get_driver)
         # home_page = login_page.login_success('admin1', '123456')
         alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
         bol = alarm_page.edit_status(1)
+        pytest.assume(bol)
+
+    @allure.story('修改告警状态')
+    @allure.title('未复归修改为复归')
+    @allure.issue('http://192.168.0.217/', name='禅道')
+    @pytest.mark.normal
+    def test_tps300_A02_UI06_翻页(self, get_driver):
+        alarm_page = alarm_viewPage.AlarmViewPage(get_driver)
+        bol = alarm_page.page_turn()
         pytest.assume(bol)
 
 

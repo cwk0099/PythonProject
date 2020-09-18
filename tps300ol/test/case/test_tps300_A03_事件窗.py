@@ -4,8 +4,8 @@ import allure
 import pytest
 
 sys.path.append(os.getcwd())
-from page import loginPage
-from page import eventPage
+from page.home import loginPage
+from safe_general import eventPage
 
 
 @pytest.mark.usefixtures('get_driver', 'open_url')
@@ -34,6 +34,13 @@ class Test_TPS300_A03_事件窗:
         bol = event_page.list_save_check()
         pytest.assume(bol)
 
+    @allure.story('修改事件列表')
+    @allure.title('增加/隐藏事件表格列并保存')
+    def test_tps300_A03_UI04_翻页(self, get_driver):
+        event_page = eventPage.EventPage(get_driver)
+        bol = event_page.page_turn()
+        pytest.assume(bol)
+
 
 if __name__ == '__main__':
     # pytest.main(['-s'])
@@ -41,7 +48,7 @@ if __name__ == '__main__':
     # -k：指定运行某一个文件
     # --instafail --tb=line，调试时候用，打印详细错误信息，遇到用例失败会停止，pytest-instafail插件
     # --reruns=2 --reruns-delay=1 ，用例失败重新运行该用例两次，并且每次间隔一秒，pytest-rerunsfailures插件
-    # --alluredir ./reports --clean-alluredir ,pytest-allure插件，生成报告在上一层目录的report文件夹
+    # --alluredir ./reports --clean-alluredir ,pytest-allure插件，生成报告在本级目录的report文件夹
     pytest.main(
         ['-s', '-q', '-k test_tps300_A03_事件窗.py', '--instafail', '--tb=line', '--reruns=2', '--reruns-delay=1',
          '--alluredir', './reports', '--clean-alluredir'])

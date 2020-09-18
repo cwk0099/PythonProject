@@ -1,5 +1,5 @@
 from page.base_page import BasePage
-from page.homePage import HomePage
+from page.home.homePage import HomePage
 
 # 登录模块的Page，继承BasePage，封装所用的到元素、方法和步骤，三者分开
 class LoginPage(BasePage):

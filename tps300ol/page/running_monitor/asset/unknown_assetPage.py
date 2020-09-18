@@ -1,26 +1,34 @@
 from page.base_page import BasePage
 
-
-class AlarmViewPage(BasePage):
-
+class UnknownAssetPage(BasePage):
     # 状态选择框
     def search_status(self):
         return self.css_selector('form > div:nth-child(1) > div > div > div.el-input.el-input--small.el-input--suffix '
                                  '> span > span > i')
 
-    # 状态选择栏：未复归和复归列表
-    def select_status(self):
-        return self.css_selectors('body > div.el-select-dropdown.el-popper.is-multiple > div.el-scrollbar > '
-                                  'div.el-select-dropdown__wrap.el-scrollbar__wrap > ul > li')
-
     # 查询按钮
     def search_btn(self):
         return self.css_selector('div:nth-child(6) > div > div > button')
 
-    # 第一个告警的编辑按钮
-    def edit_status_btn(self):
-        return self.css_selectors('div.el-table__fixed-body-wrapper > table > tbody > tr '
-                                  'i.el-icon-edit')[0]
+    # 第一个资产的注册按钮
+    def register_btn(self):
+        return self.xpaths('//div/div/button[contains(@class,"el-button--default")]')[0]
+
+    # 注册页面的确定按钮
+    def register_confirm_btn(self):
+        return self.css_selector(' div.el-dialog__footer > span > button.el-button.el-button--primary')
+
+    # 注册页面的取消按钮
+    def register_cancel_btn(self):
+        return self.xpath('//div/div[3]/span/button[1]')
+
+    # 注册页面的异常信息
+    def  register_err(self):
+        return self.css_selector('div.el-form-item__error')
+
+    # 第一个资产的删除按钮
+    def delete_btn(self):
+        return self.xpaths('//div/div/button[contains(@class,"el-button--danger")]')[0]
 
     # 提示窗的确定按钮
     def confirm_btn(self):
@@ -46,8 +54,7 @@ class AlarmViewPage(BasePage):
 
     # 当前显示的表格列，除了操作栏
     def table_list(self):
-        list_name = self.xpaths(
-            '/html/body/section/main/section/main/div/section/main/div/div/table/thead/tr/th/div')
+        list_name = self.css_selectors('table > thead > tr > th.is-center.is-leaf.cell-nowrap > div')
         list_name.pop()
         return list_name
 
@@ -61,8 +68,16 @@ class AlarmViewPage(BasePage):
 
     # 修改成功提示窗文本
     @staticmethod
-    def edit_success():
-        return '修改成功！'
+    def delete_success():
+        return '删除成功！'
+
+    @staticmethod
+    def register_success():
+        return '注册成功！'
+
+    @staticmethod
+    def register_err_mes():
+        return '请填写设备名称'
 
     # 表格列编辑保存按钮
     def list_save_btn(self):
@@ -74,7 +89,7 @@ class AlarmViewPage(BasePage):
 
     # 查询选择展示按钮
     def search_show_btn(self):
-        return self.xpath('/html/body/section/main/section/header/form/div[6]/div/div/span/button')
+        return self.css_selector(' form > div:nth-child(4) > div > div > span > button')
 
     # 查询选择展示勾选按钮
     def search_show_options(self):
@@ -100,16 +115,6 @@ class AlarmViewPage(BasePage):
             names.append(self.get_text(s_list))
         return names
 
-    # 查询为空的元素
-    def no_search_result(self):
-        return self.css_selectors('div > section > main > div > div.el-table__body-wrapper.is-scrolling-none '
-                                  '> div > span')
-
-    # 表格行序号
-    def row_numbers(self):
-        return self.xpaths('//div[contains(@class,"is-scrolling-left")]//tr[@class="el-table__row"]/td/div['
-                           '@class="cell"]')
-
     # 查询选择检操作步骤
     def search_show_check(self):
         self.element_click(self.search_show_btn())
@@ -129,9 +134,6 @@ class AlarmViewPage(BasePage):
             i = index
         if ci == (i + 1):
             c += 1
-        self.page_refresh()
-        self.wait(1)
-        self.element_click(self.search_show_btn())
         options_11 = self.search_show_options()
         names_11 = self.search_show_name()
         checked_names_11 = self.check_lists(options_11, names_11, 'el-checkbox')
@@ -199,6 +201,7 @@ class AlarmViewPage(BasePage):
         confirm_btn = self.list_confirm_btn()
         self.element_click(confirm_btn)
         self.page_refresh()
+        self.wait(1)
         table_list_3 = self.table_list()
         del (table_list_3[0])
         list_names_3 = self.list_names(table_list_3)
@@ -214,6 +217,7 @@ class AlarmViewPage(BasePage):
         confirm_btn = self.list_confirm_btn()
         self.element_click(confirm_btn)
         self.page_refresh()
+        self.wait(1)
         table_list_31 = self.table_list()
         del (table_list_31[0])
         list_names_31 = self.list_names(table_list_31)
@@ -224,31 +228,30 @@ class AlarmViewPage(BasePage):
         else:
             return False
 
-    # 修改告警状态的操作步骤
-    def edit_status(self, s):
-        select = self.search_status()
-        self.element_click(select)
+    # 删除未知资产的步骤
+    def delete_asset(self):
+        self.element_click(self.delete_btn())
+        self.element_click(self.confirm_btn())
         self.wait(1)
-        options_4 = self.select_status()
-        self.element_click(options_4[s])
-        search = self.search_btn()
-        self.element_click(search)
-        self.wait(1)
-        bol = not self.is_exist(self.no_search_result(), 0)
-        if bol:
-            self.element_click(self.edit_status_btn())
-            self.wait(1)
-            self.element_click(self.confirm_btn())
-            self.wait(1)
-            text = self.get_text(self.alert_text())
-            self.select_clean(select, options_4, search)
-            exword = self.edit_success()
-            b = bool(text == exword)
-            if b:
-                return True
-            else:
-                print('修改告警状态失败')
-                return False
+        text = self.get_text(self.alert_text())
+        if text == self.delete_success():
+            return True
         else:
-            print('无测试数据')
+            print('删除失败')
             return False
+
+    # 不填写必填项注册资产
+    def err_register(self):
+        self.element_click(self.register_btn())
+        self.page_scroll(self.register_confirm_btn())
+        self.element_click(self.register_confirm_btn())
+        self.page_scroll(self.register_err())
+        if self.get_text(self.register_err()) == self.register_err_mes():
+            self.page_scroll(self.register_cancel_btn())
+            self.element_click(self.register_cancel_btn())
+            return True
+        else:
+            self.page_scroll(self.register_cancel_btn())
+            self.element_click(self.register_cancel_btn())
+            return False
+
