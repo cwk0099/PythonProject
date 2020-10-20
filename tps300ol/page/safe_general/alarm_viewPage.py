@@ -1,7 +1,19 @@
 from page.base_page import BasePage
-
+from page.running_manager.asset_page import AssetPage
 
 class AlarmViewPage(BasePage):
+
+    # 获取当前页面URL
+    def page_url(self):
+        return self.get_url()
+
+    # 运行管理菜单
+    def running_manager(self):
+        return self.css_selector('span.menu > ul > li', 1)[2]
+
+    # 资产台账
+    def asset_menu(self):
+        return self.xpath('//li[contains(text(),"资产台帐")]')
 
     # 状态选择框
     def search_status(self):
@@ -10,8 +22,8 @@ class AlarmViewPage(BasePage):
 
     # 状态选择栏：未复归和复归列表
     def select_status(self):
-        return self.css_selectors('body > div.el-select-dropdown.el-popper.is-multiple > div.el-scrollbar > '
-                                  'div.el-select-dropdown__wrap.el-scrollbar__wrap > ul > li')
+        return self.css_selector('body > div.el-select-dropdown.el-popper.is-multiple > div.el-scrollbar > '
+                                  'div.el-select-dropdown__wrap.el-scrollbar__wrap > ul > li', 1)
 
     # 查询按钮
     def search_btn(self):
@@ -19,8 +31,8 @@ class AlarmViewPage(BasePage):
 
     # 第一个告警的编辑按钮
     def edit_status_btn(self):
-        return self.css_selectors('div.el-table__fixed-body-wrapper > table > tbody > tr '
-                                  'i.el-icon-edit')[0]
+        return self.css_selector('div.el-table__fixed-body-wrapper > table > tbody > tr '
+                                  'i.el-icon-edit', 1)[0]
 
     # 提示窗的确定按钮
     def confirm_btn(self):
@@ -34,20 +46,20 @@ class AlarmViewPage(BasePage):
 
     # 编辑表格列的选项（点击勾选的按钮）
     def table_list_options(self):
-        options = self.xpaths('//div[@x-placement="bottom"]//div//li/label')
+        options = self.xpath('//div[@x-placement="bottom"]//div//li/label', 1)
         options.pop()
         return options
 
     # 编辑表格列选项对应的名称
     def table_list_names(self):
-        names = self.xpaths('//div[@x-placement="bottom"]//div//li/span')
+        names = self.xpath('//div[@x-placement="bottom"]//div//li/span', 1)
         names.pop()
         return names
 
     # 当前显示的表格列，除了操作栏
     def table_list(self):
-        list_name = self.xpaths(
-            '/html/body/section/main/section/main/div/section/main/div/div/table/thead/tr/th/div')
+        list_name = self.xpath(
+            '/html/body/section/main/section/main/div/section/main/div/div/table/thead/tr/th/div', 1)
         list_name.pop()
         return list_name
 
@@ -78,19 +90,15 @@ class AlarmViewPage(BasePage):
 
     # 查询选择展示勾选按钮
     def search_show_options(self):
-        return self.xpaths('//body/div[contains(@class,"el-popover")]//div/ul/li/label')
+        return self.xpath('//body/div[contains(@class,"el-popover")]//div/ul/li/label', 1)
 
     # 查询选择展示名称
     def search_show_name(self):
-        return self.xpaths('//body/div[contains(@class,"el-popover")]//div/ul/li/span')
+        return self.xpath('//body/div[contains(@class,"el-popover")]//div/ul/li/span', 1)
 
     # 已展示的查询框
     def search_showed_list(self):
-        return self.xpaths('/html/body/section/main/section/header/form/div/label')
-
-    # 查询是否有已展示的项
-    def check_showed_list(self):
-        return self.is_exist(self.search_showed_list(), 1)
+        return self.xpath('/html/body/section/main/section/header/form/div/label', 1)
 
     # 已展示的查询框名称
     def search_showed_names(self):
@@ -102,8 +110,8 @@ class AlarmViewPage(BasePage):
 
     # 查询为空的元素
     def no_search_result(self):
-        return self.css_selectors('div > section > main > div > div.el-table__body-wrapper.is-scrolling-none '
-                                  '> div > span')
+        return self.css_selector('div > section > main > div > div.el-table__body-wrapper.is-scrolling-none '
+                                  '> div > span', 1)
 
     # 查询选择检操作步骤
     def search_show_check(self):
@@ -112,7 +120,7 @@ class AlarmViewPage(BasePage):
         names_1 = self.search_show_name()
         checked_names_1 = self.check_lists(options_1, names_1, 'is-checked')
         c = 0
-        if self.check_showed_list():
+        if not self.search_showed_list():
             check_names_1 = self.search_showed_names()
         else:
             check_names_1 = list()
@@ -229,7 +237,7 @@ class AlarmViewPage(BasePage):
         search = self.search_btn()
         self.element_click(search)
         self.wait(1)
-        bol = not self.is_exist(self.no_search_result(), 0)
+        bol = not self.no_search_result()
         if bol:
             self.element_click(self.edit_status_btn())
             self.wait(1)
@@ -247,3 +255,10 @@ class AlarmViewPage(BasePage):
         else:
             print('无测试数据')
             return False
+
+    # 切换到资产台账窗口
+    def switch_to_assets(self):
+        self.mouse_move(self.running_manager())
+        self.wait(2)
+        self.element_click(self.asset_menu())
+        return AssetPage(self.driver)

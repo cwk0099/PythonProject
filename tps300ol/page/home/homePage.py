@@ -2,7 +2,7 @@ from page.base_page import BasePage
 from safe_general.alarm_viewPage import AlarmViewPage
 from safe_general.eventPage import EventPage
 from safe_general.logPage import LogPage
-from running_monitor.asset.unknown_assetPage import UnknownAssetPage
+from running_monitor.asset_monitor.unknown_assetPage import UnknownAssetPage
 
 class HomePage(BasePage):
     # 安全概况
@@ -11,7 +11,7 @@ class HomePage(BasePage):
 
     # 运行监测
     def running_monitor(self):
-        return self.css_selectors('span.menu > ul > li')[1]
+        return self.css_selector('span.menu > ul > li', 1)[1]
 
     # 资产监测
     def asset_monitor(self):

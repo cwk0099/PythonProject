@@ -30,7 +30,6 @@ def print_ip():
 def connect():
     while True:
         dataSocket, addr = tps_server.accept()
-        print(f'{addr[0]}:{addr[1]}已连接')
         socks.append(dataSocket)
         addrs.append(addr)
         # t = threading.Thread(target=json_send, args=(dataSocket, addr))
@@ -104,8 +103,6 @@ def is_connectd(da_Socket, addr, Bufflen, ts):
                     del (ads[index])
             ts.stop()
             break
-            # t1 = threading.Thread(target=print_ip)
-            # t1.start()
     return
 
 
@@ -114,7 +111,7 @@ if __name__ == '__main__':
     IP = ''
     port = 8802
     tps_server.bind((IP, port))
-    tps_server.listen(8)
+    tps_server.listen()
     ads = []
     socks = []
     addrs = []

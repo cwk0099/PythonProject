@@ -4,7 +4,7 @@ import allure
 import pytest
 # 调用自己写的模块的时候，需要用到这个代码，不然会报错
 sys.path.append(os.getcwd())
-from Home import loginPage
+from page.home import loginPage
 
 
 # 使用前后置函数来获取driver和打开网址

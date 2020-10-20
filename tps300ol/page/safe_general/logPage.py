@@ -7,15 +7,15 @@ class LogPage(BasePage):
 
     # 查询列表选择选项
     def search_select_options(self):
-        return self.xpaths('//body/div[contains(@class,"el-popover")]//div/ul/li/label')
+        return self.xpath('//body/div[contains(@class,"el-popover")]//div/ul/li/label', 1)
 
     # 查询列表展示选项名称
     def search_select_names(self):
-        return self.xpaths('//body/div[contains(@class,"el-popover")]//div/ul/li/span')
+        return self.xpath('//body/div[contains(@class,"el-popover")]//div/ul/li/span', 1)
 
     # 已展示的查询选项
     def search_showed_options(self):
-        return self.xpaths('/html/body/section/main/section/header/form/div/label')
+        return self.xpath('/html/body/section/main/section/header/form/div/label', 1)
 
     # 已展示的查询选项的名称
     def search_showed_names(self):
@@ -25,14 +25,10 @@ class LogPage(BasePage):
             names.append(self.get_text(s_list))
         return names
 
-    # 查询是否有已展示的项
-    def check_showed_options(self):
-        return self.is_exist(self.search_showed_options(), 1)
-
     # 当前显示的表格列，除了操作栏
     def table_list(self):
-        list_name = self.xpaths(
-            '/html/body/section/main/section/main/section/main/div/div[2]/table/thead/tr/th/div')
+        list_name = self.xpath(
+            '/html/body/section/main/section/main/section/main/div/div[2]/table/thead/tr/th/div', 1)
         return list_name
 
     # 当前显示的表格列的名称，除了操作栏
@@ -44,12 +40,12 @@ class LogPage(BasePage):
 
     # 编辑表格列的选项（点击勾选的按钮）
     def table_list_options(self):
-        options = self.xpaths('//div[@x-placement="bottom"]//div//li/label')
+        options = self.xpath('//div[@x-placement="bottom"]//div//li/label', 1)
         return options
 
     # 编辑表格列选项对应的名称
     def table_list_names(self):
-        names = self.xpaths('//div[@x-placement="bottom"]//div//li/span')
+        names = self.xpath('//div[@x-placement="bottom"]//div//li/span', 1)
         return names
 
     # 表格列编辑保存按钮
@@ -76,7 +72,7 @@ class LogPage(BasePage):
         names_1 = self.search_select_names()
         checked_names_1 = self.check_lists(options_1, names_1, 'is-checked')
         c = 0
-        if self.check_showed_options():
+        if not self.search_showed_options():
             check_names_1 = self.search_showed_names()
         else:
             check_names_1 = list()

@@ -1,6 +1,6 @@
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-
+from page import *
 from method import *
 from time import sleep
 
@@ -17,41 +17,76 @@ class BasePage:
     def wait(second):
         sleep(second)
 
-    # 使用css选择器选择多个元素，返回的是一个列表，封装了selenium的方法
-    def css_selectors(self, selector):
-        return self.driver.find_elements_by_css_selector(selector)
+    # 使用css选择器定位元素，传入css选择器和s参数，s默认为0
+    # 当s为0时，应返回一个元素，如果定位不到或者定位到了多个元素，则会返回False
+    # 当s为1时，返回一个元素列表，若定位不到，则返回False
+    def css_selector(self, selector, s=0):
+        ele = self.driver.find_elements_by_css_selector(selector)
+        if s == 0 and len(ele) == 1:
+            return ele[0]
+        elif len(ele) == 0:
+            print('找不到对应元素')
+            return False
+        elif s == 1 and len(ele) != 0:
+            return ele
+        elif s == 0 and len(ele) > 1:
+            print('找到多个相同的元素')
+            return False
 
-    # 使用xpath选择多个元素，返回的是一个列表，封装了selenium的方法
-    def xpaths(self, xpath):
-        return self.driver.find_elements_by_xpath(xpath)
+    # 使用xpath定位元素，传入xpath路径和s参数，s默认为0
+    # 当s为0时，应返回一个元素，如果定位不到或者定位到了多个元素，则会返回False
+    # 当s为1时，返回一个元素列表，若定位不到，则返回False
+    def xpath(self, xpath, s=0):
+        ele = self.driver.find_elements_by_xpaths(xpath)
+        if s == 0 and len(ele) == 1:
+            return ele[0]
+        elif len(ele) == 0:
+            print('找不到对应元素')
+            return False
+        elif s == 1 and len(ele) != 0:
+            return ele
+        elif s == 0 and len(ele) > 1:
+            print('找到多个相同的元素')
+            return False
 
-    # 使用css选择器选择一个，封装了selenium的方法
-    def css_selector(self, selector):
-        return self.driver.find_element_by_css_selector(selector)
-
-    # 使用xpath选择一个，封装了selenium的方法
-    def xpath(self, xpath):
-        return self.driver.find_element_by_xpath(xpath)
-
-    # 使用css选择器择一个子元素的方法
+    # 使用css选择器定位子元素，传入css选择器和s参数,s默认为0
+    # 当s为0时，应返回一个子元素，如果定位不到或者定位到了多个子元素，则会返回False
+    # 当s为1时，返回一个子元素列表，若定位不到，则返回False
     @staticmethod
-    def son_css_selector(element, selector):
-        return element.find_element_by_css_selector(selector)
+    def son_css_selector(element, selector, s=0):
+        ele = element.find_elements_by_css_selector(selector)
+        if s == 0 and len(ele) == 1:
+            return ele[0]
+        elif len(ele) == 0:
+            print('找不到对应子元素')
+            return False
+        elif s == 1 and len(ele) != 0:
+            return ele
+        elif s == 0 and len(ele) > 1:
+            print('找到多个相同的子元素')
+            return False
 
-    # 使用css选择器择多个子元素的方法，返回一个列表
+    # 使用xpath定位子元素，传入xpath和s参数
+    # 当s为0时，应返回一个子元素，如果定位不到或者定位到了多个子元素，则会返回False
+    # 当s为1时，返回一个子元素列表，若定位不到，则返回False
     @staticmethod
-    def son_css_selectors(element, selector):
-        return element.find_elements_by_css_selector(selector)
+    def son_xpath(element, xpath, s=0):
+        ele = element.find_elements_by_xpath(xpath)
+        if s == 0 and len(ele) == 1:
+            return ele[0]
+        elif len(ele) == 0:
+            print('找不到对应子元素')
+            return False
+        elif s == 1 and len(ele) != 0:
+            return ele
+        elif s == 0 and len(ele) > 1:
+            print('找到多个相同的子元素')
+            return False
 
-    # xpath选择一个子元素的方法
+    # 定位父元素的方法
     @staticmethod
-    def son_xpath(element, xpath):
-        return element.find_element_by_xpath(xpath)
-
-    # xpath选择多个子元素的方法，返回一个列表
-    @staticmethod
-    def son_xpaths(element, xpath):
-        return element.find_elements_by_xpath(xpath)
+    def father_element(element):
+        return element.find_element_by_xpath('..')
 
     # 获取元素文本的办法，封装了selenium的方法
     @staticmethod
@@ -66,12 +101,6 @@ class BasePage:
         ActionChains(self.driver).move_to_element(
             element
         ).perform()
-
-    # 二次封装公共方法,判断元素是否存在,传入一个element列表和一个整数,若是0则是寻找单个元素,若是1则寻找多个元素
-    # 存在则返回True,否则False
-    @staticmethod
-    def is_exist(element_list, s):
-        return is_element_exist(element_list, s)
 
     # 二次封装公共方法，清除查询选择框的选项，并点击查询
     @staticmethod
@@ -101,35 +130,42 @@ class BasePage:
     def check_lists(options, options_name, status):
         return option_names(options, options_name, status)
 
-    #  二次封装公共方法，传入表格编辑选项、名称和选项的class，返回被选中或者未选中的选项的名称
+    # 二次封装公共方法，传入表格编辑选项、名称和选项的class，返回被选中或者未选中的选项的名称
     @staticmethod
     def check_list(options, options_name, status):
         return op_name(options, options_name, status)
 
+    # 页数列表
     def page_list(self):
-        return self.css_selectors('div > ul > li.number')
+        return self.css_selector('div > ul > li.number', 1)
 
+    # 后退一页按钮
     def back_btn(self):
         return self.css_selector(' div > button.btn-prev')
 
+    # 向前翻页按钮
     def next_btn(self):
         return self.css_selector(' div > button.btn-next')
 
+    # 页数输入框
     def page_input(self):
         return self.css_selector('span.el-pagination__jump > div > input')
 
+    # 用来检查翻页是否正确的按钮
     def checked_number(self):
-        return self.css_selectors(' div.el-table__body-wrapper tr:nth-child(1) div')
+        return self.css_selector(' div.el-table__body-wrapper tr:nth-child(1) div', 1)
 
+    # 页数的更多按钮
     def more_btn(self):
         return self.css_selector('div > ul > li.more')
 
+    # 翻页的步骤
     def page_turn(self):
         s = len(self.page_list())
         if s == 1:
             self.input_text(self.page_input(), '2')
             self.input_text(self.page_input(), Keys.ENTER)
-            if self.is_exist(self.checked_number(), 1):
+            if not self.checked_number():
                 c = self.get_text(self.checked_number()[0])
             else:
                 c = []

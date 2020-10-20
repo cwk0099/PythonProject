@@ -1,5 +1,6 @@
 from page.base_page import BasePage
 
+
 class UnknownAssetPage(BasePage):
     # 状态选择框
     def search_status(self):
@@ -12,7 +13,7 @@ class UnknownAssetPage(BasePage):
 
     # 第一个资产的注册按钮
     def register_btn(self):
-        return self.xpaths('//div/div/button[contains(@class,"el-button--default")]')[0]
+        return self.xpath('//div/div/button[contains(@class,"el-button--default")]', 1)[0]
 
     # 注册页面的确定按钮
     def register_confirm_btn(self):
@@ -23,12 +24,12 @@ class UnknownAssetPage(BasePage):
         return self.xpath('//div/div[3]/span/button[1]')
 
     # 注册页面的异常信息
-    def  register_err(self):
+    def register_err(self):
         return self.css_selector('div.el-form-item__error')
 
     # 第一个资产的删除按钮
     def delete_btn(self):
-        return self.xpaths('//div/div/button[contains(@class,"el-button--danger")]')[0]
+        return self.xpath('//div/div/button[contains(@class,"el-button--danger")]', 1)[0]
 
     # 提示窗的确定按钮
     def confirm_btn(self):
@@ -42,19 +43,19 @@ class UnknownAssetPage(BasePage):
 
     # 编辑表格列的选项（点击勾选的按钮）
     def table_list_options(self):
-        options = self.xpaths('//div[@x-placement="bottom"]//div//li/label')
+        options = self.xpath('//div[@x-placement="bottom"]//div//li/label', 1)
         options.pop()
         return options
 
     # 编辑表格列选项对应的名称
     def table_list_names(self):
-        names = self.xpaths('//div[@x-placement="bottom"]//div//li/span')
+        names = self.xpath('//div[@x-placement="bottom"]//div//li/span', 1)
         names.pop()
         return names
 
     # 当前显示的表格列，除了操作栏
     def table_list(self):
-        list_name = self.css_selectors('table > thead > tr > th.is-center.is-leaf.cell-nowrap > div')
+        list_name = self.css_selector('table > thead > tr > th.is-center.is-leaf.cell-nowrap > div', 1)
         list_name.pop()
         return list_name
 
@@ -93,19 +94,15 @@ class UnknownAssetPage(BasePage):
 
     # 查询选择展示勾选按钮
     def search_show_options(self):
-        return self.xpaths('//body/div[contains(@class,"el-popover")]//div/ul/li/label')
+        return self.xpath('//body/div[contains(@class,"el-popover")]//div/ul/li/label', 1)
 
     # 查询选择展示名称
     def search_show_name(self):
-        return self.xpaths('//body/div[contains(@class,"el-popover")]//div/ul/li/span')
+        return self.xpath('//body/div[contains(@class,"el-popover")]//div/ul/li/span', 1)
 
     # 已展示的查询框
     def search_showed_list(self):
-        return self.xpaths('/html/body/section/main/section/header/form/div/label')
-
-    # 查询是否有已展示的项
-    def check_showed_list(self):
-        return self.is_exist(self.search_showed_list(), 1)
+        return self.xpath('/html/body/section/main/section/header/form/div/label', 1)
 
     # 已展示的查询框名称
     def search_showed_names(self):
@@ -122,7 +119,7 @@ class UnknownAssetPage(BasePage):
         names_1 = self.search_show_name()
         checked_names_1 = self.check_lists(options_1, names_1, 'is-checked')
         c = 0
-        if self.check_showed_list():
+        if not self.search_showed_list():
             check_names_1 = self.search_showed_names()
         else:
             check_names_1 = list()
@@ -254,4 +251,3 @@ class UnknownAssetPage(BasePage):
             self.page_scroll(self.register_cancel_btn())
             self.element_click(self.register_cancel_btn())
             return False
-
