@@ -1,23 +1,25 @@
-from pythink import ThinkDatabase, ThinkModel
+from pythink import ThinkModel, ThinkDatabase
 import pymysql
 pymysql.install_as_MySQLdb()
+from urllib import parse
+passwd = 'password_Welcome%123'
+# 防止密码含有特殊字符，把密码url编码化，防止报错
+# npasswd = parse.quote_plus(passwd)
+db_url = f'mysql://root:{passwd}@192.168.0.237:9902/tps300ol'
 
-db_url = 'mysql://chase:Jumho_123@192.168.0.237:9902/tps300ol'
 db = ThinkDatabase(db_url)
 
-class BaseDbModel(ThinkModel):
+class Tps300olThinkModel(ThinkModel):
     database = db
 
-class DeviceDbModel(BaseDbModel):
-    table_name = 'device'
+class DeviceThinkModel(Tps300olThinkModel):
+    tn = 'device'
 
 
 if __name__ == '__main__':
-    rows = DeviceDbModel.select(['duid'], where='ip="192.168.0.253" and devName="华三交换机"',)
+    # 查询数量
+    print(DeviceThinkModel.count())
+    # 查询记录
+    rows = DeviceThinkModel.select(["*"], where='devName="华三交换机" and ip="192.168.0.253"')
     for row in rows:
         print(row.duid)
-    # db = pymysql.connect(host='192.168.0.237', user='root', password='password_Welcome%123', port=9902,
-    # database='tps300ol')
-    # cur = db.cursor() row = cur.execute('select duid from device where ip="192.168.0.253" and
-    # devName="华三交换机" ')
-    # print(row)
