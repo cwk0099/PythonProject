@@ -1,6 +1,5 @@
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-from page import *
 from method import *
 from time import sleep
 
