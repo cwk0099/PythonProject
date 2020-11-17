@@ -4,7 +4,7 @@ import pytest
 import allure
 sys.path.append(os.getcwd())
 from page.home.loginPage import LoginPage
-from page.running_monitor.asset.unknown_assetPage import UnknownAssetPage
+from page.running_monitor.asset_monitor.unknown_assetPage import UnknownAssetPage
 
 @pytest.mark.usefixtures('get_driver', 'open_url')
 @allure.feature('运行监测-资产监测-未知资产')

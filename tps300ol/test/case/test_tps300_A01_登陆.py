@@ -9,8 +9,7 @@ from page.home import loginPage
 
 # 使用前后置函数来获取driver和打开网址
 @pytest.mark.usefixtures('get_driver', 'open_url')
-# 功能（一级标题）
-@allure.feature('登陆')
+@allure.feature('一级标题：登陆')
 class Test_TPS300_A01_登陆:
     # 参数化传递，用于数据不同，操作一样的用例
     @pytest.mark.parametrize('username,password,exword',

@@ -6,8 +6,8 @@ from time import sleep
 # 基本的Page,二次封装所有用例都要用到的方法，用多少写多少，如：元素定位，隐形等待，等待，获取文本等等
 # 之后所有的Page都要继承BasePage
 class BasePage:
-    # 构造方法，传递driver和隐形等待
     def __init__(self, driver):
+        # 构造方法，传递driver和隐形等待
         self.driver = driver
         self.driver.implicitly_wait(10)
 
@@ -20,6 +20,11 @@ class BasePage:
     # 当s为0时，应返回一个元素，如果定位不到或者定位到了多个元素，则会返回False
     # 当s为1时，返回一个元素列表，若定位不到，则返回False
     def css_selector(self, selector, s=0):
+        """
+        使用css选择器定位元素，传入css选择器和s参数，s默认为0
+        # 当s为0时，应返回一个元素，如果定位不到或者定位到了多个元素，则会返回False
+        # 当s为1时，返回一个元素列表，若定位不到，则返回False
+        """
         ele = self.driver.find_elements_by_css_selector(selector)
         if s == 0 and len(ele) == 1:
             return ele[0]

@@ -1,0 +1,20 @@
+{
+    "Header": {
+        "DcdGuid": "d3",
+        "DevGuid": "4a5a3ea0-ecb7-11ea-92b9-ede91a93a2a4",
+        "Sid": "5098fe1c-2d24-45ae-8856-dbaff98cbfbc",
+        "Timestamp": "15713852231"
+    },
+    "Data": {
+        "AppName": "",
+        "EventType ": "RunningStatus",
+        "FunClassTag": "DevUtilizeRate",
+        "FunClassValue": "",
+        "DiscoverTime": "2020-09-22 14:48:12",
+        "Details": {
+            "DeviceSubType": "SVR",
+            "CPU": "70",
+            "Memory": "70"
+        }
+    }
+}

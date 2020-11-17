@@ -39,7 +39,6 @@ class HomePage(BasePage):
         self.mouse_move(self.safe_general())
         self.wait(1)
         self.element_click(self.alarmView())
-        self.wait(1)
         return AlarmViewPage(self.driver)
 
     # 切换到事件窗页面
@@ -48,7 +47,6 @@ class HomePage(BasePage):
         self.mouse_move(self.safe_general())
         self.wait(1)
         self.element_click(self.eventView())
-        self.wait(1)
         return EventPage(self.driver)
 
     # 切换到日志窗页面
@@ -57,7 +55,6 @@ class HomePage(BasePage):
         self.mouse_move(self.safe_general())
         self.wait(1)
         self.element_click(self.logView())
-        self.wait(1)
         return LogPage(self.driver)
 
     # 切换到未知资产
