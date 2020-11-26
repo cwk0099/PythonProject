@@ -10,6 +10,3 @@ class TpsThread(threading.Thread):
 
     def check(self):
         return self.__running
-
-
-

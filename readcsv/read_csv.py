@@ -9,12 +9,13 @@ class ReadCsv:
     def loadcsv(self):
         self.__csvfile = open(self.__path, 'r+', encoding=self.__encoding)
 
-    # 读取每行
+    # 读取每行,返回一个带元组的列表
     def readline(self):
         data = list()
         csv_reader = csv.reader(self.__csvfile)
         for line in csv_reader:
-            data.append(line)
+            line_t = tuple(line)
+            data.append(line_t)
         del data[0]
         return data
 
@@ -22,13 +23,18 @@ class ReadCsv:
     def readtitle(self):
         self.__csvfile.seek(0, 0)
         csv_reader = csv.DictReader(self.__csvfile)
-        r = self.__csvfile
         title = csv_reader.fieldnames
-        return title
+        str_row = str()
+        for index, row in enumerate(title):
+            if index + 1 == len(title):
+                str_row += row
+            else:
+                str_row += row + ','
+        return str_row
 
     # 根据标题获取列
     def onerow(self, title):
-        # 通过seek重置文件指针，不然不去的内容为空
+        # 通过seek重置文件指针，不然再次读取的内容为空
         self.__csvfile.seek(0, 0)
         csv_reader = csv.DictReader(self.__csvfile)
         one_row = [row[title] for row in csv_reader]

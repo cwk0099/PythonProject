@@ -5,6 +5,7 @@ import pytest
 # 调用自己写的模块的时候，需要用到这个代码，不然会报错
 sys.path.append(os.getcwd())
 from page.home import loginPage
+from read_csv import ReadCsv
 
 
 # 使用前后置函数来获取driver和打开网址
@@ -12,10 +13,10 @@ from page.home import loginPage
 @allure.feature('一级标题：登陆')
 class Test_TPS300_A01_登陆:
     # 参数化传递，用于数据不同，操作一样的用例
-    @pytest.mark.parametrize('username,password,exword',
-                             [('', '', '用户名不能为空'), ('123', '', '密码不能为空'),
-                              ('', '123', '用户名不能为空'), ('123', '123', '密码长度不能少于6位'),
-                              ('admin', '1234567', '密码错误')], ['admin123', '13456', '用户不存在'])
+    re = ReadCsv('../../../readcsv/csvtest.csv')
+    titles = re.readtitle()
+    param = re.readline()
+    @pytest.mark.parametrize(titles, param)
     @allure.story("二级标题（场景）")
     @allure.title("三级标题（用例标题）")
     # 可用来跳转禅道

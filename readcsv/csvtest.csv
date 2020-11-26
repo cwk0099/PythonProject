@@ -1,3 +1,7 @@
 username,password,exword
-admin,123456,密码错误
+admin,1234567,密码错误
 ,123,用户名不能为空
+,,用户名不能为空
+admin,,密码不能为空
+admin,123,密码不能少于6位
+admin123,123456,用户不存在
