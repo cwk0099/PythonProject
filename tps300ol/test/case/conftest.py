@@ -49,7 +49,7 @@ def pytest_runtest_makereport(item, call):
             os.mkdir(file_purl)
         file_url = file_purl + name + '_' + pic_time + '.png'
         ## 截图保存
-        bol = wd.get_screenshot_as_file(file_url)
+        wd.get_screenshot_as_file(file_url)
         ## 读取图片为bytes文件并且附加到对应测试用例的报告上
         with allure.step("添加用例失败截图"):
             with open(file_url, mode='rb') as f:

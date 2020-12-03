@@ -1,3 +1,5 @@
+import os
+
 from read_configure import ReadConfigure
 import requests
 

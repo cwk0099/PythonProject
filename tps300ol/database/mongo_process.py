@@ -1,6 +1,6 @@
 import time
+import datetime
 from pymongo import MongoClient, InsertOne
-from dateutil import parser
 from multiprocessing import Process
 # mongodb多进程批量插入1KW条数据
 
@@ -13,7 +13,7 @@ def insertmongo(host, port):
     db = client.mjs
     col = db.clientlogs
     arr = list()
-    now = parser.parse(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+    now = (datetime.datetime.now() - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
     for i in range(10):
         for j in range(200000):
             data = {

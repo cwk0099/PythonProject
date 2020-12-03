@@ -6,9 +6,6 @@ class ReadCsv:
         self.__encoding = encoding
         self.__csvfile = open(self.__path, 'r+', encoding=self.__encoding)
 
-    def loadcsv(self):
-        self.__csvfile = open(self.__path, 'r+', encoding=self.__encoding)
-
     # 读取每行,返回一个带元组的列表
     def readline(self):
         data = list()
@@ -21,6 +18,7 @@ class ReadCsv:
 
     # 获取行头，返回一个列表
     def readtitle(self):
+        # 通过seek重置文件指针，不然再次读取的内容为空
         self.__csvfile.seek(0, 0)
         csv_reader = csv.DictReader(self.__csvfile)
         title = csv_reader.fieldnames
@@ -34,7 +32,6 @@ class ReadCsv:
 
     # 根据标题获取列
     def onerow(self, title):
-        # 通过seek重置文件指针，不然再次读取的内容为空
         self.__csvfile.seek(0, 0)
         csv_reader = csv.DictReader(self.__csvfile)
         one_row = [row[title] for row in csv_reader]

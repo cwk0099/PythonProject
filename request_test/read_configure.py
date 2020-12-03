@@ -5,15 +5,13 @@ import configparser
 # 读取configure配置文件的类
 class ReadConfigure:
     def __init__(self):
-        fd = open("configure.ini", 'r', encoding='UTF-8')
+        fd = open("configure.ini", 'r+', encoding='UTF-8')
         data = fd.read()
         # 去除BOM头
         if data[:3] == codecs.BOM_UTF8:
             data = data[3:]
-            file = open('configure.ini', 'w', encoding='UTF-8')
-            file.write(data)
-            file.close()
-        fd.close()
+            fd.write(data)
+            fd.close()
 
         self.cf = configparser.ConfigParser()
         self.cf.read('configure.ini', encoding='UTF-8')

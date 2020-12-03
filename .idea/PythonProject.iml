@@ -5,6 +5,9 @@
       <sourceFolder url="file://$MODULE_DIR$/tps300ol_ui_pytest" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tps300ol" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tps300ol/test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tps300ol/page" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/request_test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/readcsv" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/tps300ol/test/allure-reports" />
       <excludeFolder url="file://$MODULE_DIR$/tps300ol/test/reports" />
     </content>

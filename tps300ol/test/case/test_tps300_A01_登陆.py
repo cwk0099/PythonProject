@@ -54,7 +54,7 @@ if __name__ == '__main__':
     # --instafail --tb=line，调试时候用，打印详细错误信息，遇到用例失败会停止，pytest-instafail插件
     # --reruns=2 --reruns-delay=1 ，用例失败重新运行该用例两次，并且每次间隔一秒，pytest-rerunsfailures插件
     # --alluredir ./reports --clean-alluredir ,pytest-allure插件，生成报告在上一层目录的report文件夹
-    pytest.main(['-s', '-q', '-k test_tps300_A01_登陆.py', '--instafail --tb=line', '--return 2 --returns-delay 1',
+    pytest.main(['-s', '-q', '-k test_tps300_A01_登陆.py', '--instafail --tb=line', '--reruns=2 --reruns-delay=1',
                  '--alluredir', './reports', '--clean-alluredir'])
     # 生成报告，每次执行都清空数据
     os.system('allure generate reports -o allure-reports --clean')
