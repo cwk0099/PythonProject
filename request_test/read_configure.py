@@ -25,6 +25,7 @@ class ReadConfigure:
 
     # 读取字符串参数，返回一个列表
     def getparameters_string(self):
+        # plist 返回一个带元组的列表
         plist = self.cf.items('parameters')
         if len(plist) == 0:
             print('字符串参数列表为空')

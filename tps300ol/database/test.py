@@ -9,12 +9,22 @@
 # col = db.filelogs
 # re = col.find_one()
 # print(re)
-import datetime
+# import datetime
 import time
 
-from dateutil import parser
+# from dateutil import parser
+#
+# now = parser.parse(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+# now1 = (datetime.datetime.now() - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+# print(now)
+# print(now1)
+import IPy
+stime = time.time()
+for i in range(1000):
+    for j in range(1000):
+        i += 1
+etime = time.time()
+t = etime-stime
+print(f'{t:.3}')
 
-now = parser.parse(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-now1 = (datetime.datetime.now() - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-print(now)
-print(now1)
+print(IPy.IP('111'))

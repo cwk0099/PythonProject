@@ -30,7 +30,7 @@ str1 = '''
 '''
 # 将字符串转为json格式
 print(type(str1))
-data = json.loads(str1)
+data = json.dumps(str1)
 print(type(data))
 print(data)
 
