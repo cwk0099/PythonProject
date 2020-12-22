@@ -1,7 +1,8 @@
 import time
 import datetime
 from pymongo import MongoClient, InsertOne,errors
-from multiprocessing import Process
+from threading import Thread
+import os
 # mongodb多进程批量插入700W条数据
 
 # 插入数据进程
@@ -21,7 +22,7 @@ class InMongo:
         arr = list()
         now = (datetime.datetime.now() - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
         for i in range(10):
-            for j in range(100000):
+            for j in range(20000):
                 data = {
                     'ip': "192.168.0.111",
                     'username': "admin",
@@ -98,14 +99,16 @@ if __name__ == '__main__':
         threads = list()
         start_time = time.time()
         ho, po = insermong.gethp()
-        print('连接成功，正在执行中，请稍等6-8分钟...')
-        for k in range(7):
-            threads.append(Process(target=insermong.insertmongo, args=(ho, po)))
+        print('连接成功，正在执行中，请稍等...')
+        for k in range(5):
+            threads.append(Thread(target=insermong.insertmongo, args=(ho, po)))
             threads[k].start()
             time.sleep(0.5)
         for t in threads:
             t.join()
         end_time = time.time()
         print(f'执行完成,共运行了：{(end_time - start_time):.2f}s')
+        os.system('pause')
     else:
         print('程序退出！')
+        os.system('pause')

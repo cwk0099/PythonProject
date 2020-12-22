@@ -1,13 +1,16 @@
 import socket
-import sys
-from tps_thread import TpsThread
+from socket import error
+import os
+from threading import Thread
 import json
-import time
+
 
 def tcp(datasocket):
     while True:
         try:
             msg = datasocket.recv(8)
+            ms = bytesToHexString(msg)
+            print(f'报文头为：{ms}')
             b = b'\xc2'
             if msg[0] == ord('\xa0'):
                 print('日志标识为:0xa0')
@@ -54,54 +57,83 @@ def tcp(datasocket):
             try:
                 json_str = json_b.decode()
             except UnicodeDecodeError:
-                print('接收出错，请重新连接')
-                dataSocket.close()
-                ne_ip = input('请输入要连接的ip：')
-                n_ip = ''
-                print('正在等待连接...')
-                while n_ip != ne_ip:
-                    dataSocket, addr = tps_server.accept()
-                    ladd = list(addr)
-                    n_ip = ladd[0]
-                    print(n_ip)
-                    print(f'{addr[0]}已连接')
-                continue
-            mjs_json = json.loads(json_str)
-            print('发送的json为：')
-            print(mjs_json)
-        except (ConnectionAbortedError, OSError):
-            break
+                print('接收json出错，请重新连接')
+                return
+        except (ConnectionAbortedError, OSError, ConnectionError,
+                ConnectionResetError, ConnectionRefusedError, error, IndexError):
+            print('连接出错！正在尝试重新连接')
+            datasocket.close()
+            ne_ip = need_ip
+            print('正在等待连接...')
+            while True:
+                datasocket, addr1 = tps_server.accept()
+                ladd1 = list(addr)
+                print(ladd1[0])
+                print(f'{addr1[0]}已连接')
+                if ladd1[0] == ne_ip:
+                    print(f'{ne_ip}已连接！')
+                    break
+            continue
+        mjs_json = json.loads(json_str)
+        print('发送的json为：')
+        print(mjs_json)
+
+
+def validate_ip(ipaddr):
+    ips = ipaddr.split('.')
+    if len(ips) != 4:
+        return False
+    for index, ip in enumerate(ips):
+        try:
+            int_ip = int(ip)
+        except ValueError:
+            return False
+        if 0 > int_ip or int_ip >= 255:
+            return False
+    return True
+
+
+def bytesToHexString(data):
+    temp = []
+    for i in data:
+        temp.append('0x%02X' % i)
+    return temp
 
 
 if __name__ == '__main__':
     tps_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     IP = ''
-    k = 0
-    while k == 0:
+    while True:
         port = int(input('请输入监听端口：'))
         try:
             tps_server.bind((IP, port))
         except OSError:
             print("地址无效或者端口被占用，请重新选择")
             continue
-        k = 1
+        break
     tps_server.listen(10)
     buff = 1024
-    need_ip = input('请输入要连接的ip：')
-    nip = ''
-    print('正在等待连接...')
-    while nip != need_ip:
-        dataSocket, addr = tps_server.accept()
-        ladd = list(addr)
-        nip = ladd[0]
-        print(nip)
-        print(f'{addr[0]}已连接')
-    thread_tcp = TpsThread(target=tcp, args=(dataSocket,))
-    thread_tcp.start()
     while True:
-        k = input('连接成功，请输入n退出：\n')
-        if k == 'n':
-            dataSocket.close()
+        need_ip = input('请输入要连接的ip：')
+        if validate_ip(need_ip):
+            nip = None
+            print('正在等待连接...')
+            while True:
+                dataSocket, addr = tps_server.accept()
+                ladd = list(addr)
+                nip = ladd[0]
+                if nip != need_ip:
+                    print(nip)
+                    print(f'{addr[0]}已连接')
+                    continue
+                else:
+                    print(nip)
+                    print(f'{addr[0]}已连接！')
+                    break
             break
-    time.sleep(1)
-    sys.exit(0)
+        else:
+            print('非法ip，请重新输入！')
+    thread_tcp = Thread(target=tcp, args=(dataSocket,))
+    thread_tcp.start()
+    thread_tcp.join()
+    os.system('pause')
