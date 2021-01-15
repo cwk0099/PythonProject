@@ -3,29 +3,13 @@ from socket import error
 import os
 from threading import Thread
 import json
+from gooey import GooeyParser
 
 
 def tcp(datasocket, ne_ip):
-    global switch
-    datasocket.settimeout(5.0)
     while True:
         try:
-            while True:
-                try:
-                    msg = datasocket.recv(8)
-                except error:
-                    if switch == 'q':
-                        datasocket, ne_ip = switch_ip(datasocket, ne_ip)
-                    continue
-                    # 心跳检测
-                    # response = os.popen("ping -n 1 " + ne_ip).read()
-                    # if "已接收 = 1" in response:
-                    #     continue
-                    # else:
-                    #     datasocket, ne_ip = switch_ip(datasocket, ne_ip)
-                    #     continue
-                break
-            # noinspection PyUnboundLocalVariable
+            msg = datasocket.recv(8)
             ms = bytesToHexString(msg)
             print(f'报文头为：{ms}')
             b = b'\xc2'
@@ -67,7 +51,7 @@ def tcp(datasocket, ne_ip):
                     print(f"日志子类型编码有误，为：{chr(msg[3]).encode().replace(b, b'')}")
             else:
                 print(f"日志子类型编码有误，为：{chr(msg[2]).encode().replace(b, b'')}")
-            lenth = int.from_bytes(msg[4:8], byteorder='big') - 8
+            lenth = int.from_bytes(msg[4:8], byteorder='big')
             print(f'json长度为：{lenth}')
             json_b = datasocket.recv(lenth)
             print(json_b)
@@ -77,33 +61,26 @@ def tcp(datasocket, ne_ip):
                 print('接收json出错，请重新连接')
                 return
         except (ConnectionAbortedError, OSError, ConnectionError,
-                ConnectionResetError, ConnectionRefusedError, IndexError) as e:
-            print(e)
+                ConnectionResetError, ConnectionRefusedError, error, IndexError):
+            print('连接出错！正在尝试重新连接')
             datasocket.close()
-            return
+            if ne_ip == '192.168.0.241':
+                ne_ip = '192.168.0.242'
+            elif ne_ip == '192.168.0.242':
+                ne_ip = '192.168.0.241'
+            print('正在等待连接...')
+            while True:
+                datasocket, addr1 = tps_server.accept()
+                ladd1 = list(addr)
+                print(ladd1[0])
+                print(f'{addr1[0]}已连接')
+                if ladd1[0] == ne_ip:
+                    print(f'{ne_ip}已连接！')
+                    break
+            continue
         mjs_json = json.loads(json_str)
         print('发送的json为：')
         print(json.dumps(mjs_json, sort_keys=False, indent=3, separators=(',', ':'), ensure_ascii=False))
-
-
-def switch_ip(datasocket1, nee_ip):
-    global switch
-    print('正在切换连接')
-    datasocket1.close()
-    if nee_ip == '192.168.0.241':
-        nee_ip = '192.168.0.242'
-    elif nee_ip == '192.168.0.242':
-        nee_ip = '192.168.0.241'
-    print('正在等待连接...')
-    while True:
-        datasocket1, addr2 = tps_server.accept()
-        ladd2 = list(addr2)
-        print(f'{addr2[0]}已连接')
-        if ladd2[0] == nee_ip:
-            print(f'{nee_ip}已连接！')
-            break
-    switch = ''
-    return datasocket1, nee_ip
 
 
 def validate_ip(ipaddr):
@@ -125,13 +102,6 @@ def bytesToHexString(data):
     for i in data:
         temp.append('0x%02X' % i)
     return temp
-
-def checkSwitch():
-    global switch, stop
-    while True:
-        switch = input('输入q切换连接:')
-        if not stop:
-            return
 
 
 if __name__ == '__main__':
@@ -157,20 +127,17 @@ if __name__ == '__main__':
                 ladd = list(addr)
                 nip = ladd[0]
                 if nip != need_ip:
+                    print(nip)
                     print(f'{addr[0]}已连接')
                     continue
                 else:
+                    print(nip)
                     print(f'{addr[0]}已连接！')
                     break
             break
         else:
             print('非法ip，请重新输入！')
-    switch = ''
-    stop = True
-    thread_tcp = Thread(target=tcp, args=(dataSocket, need_ip))
-    thread_check = Thread(target=checkSwitch, args=())
+    thread_tcp = Thread(target=tcp, args=(dataSocket,need_ip))
     thread_tcp.start()
-    thread_check.start()
     thread_tcp.join()
-    stop = False
     os.system('pause')

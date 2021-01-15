@@ -1,6 +1,6 @@
 import time
 import datetime
-from pymongo import MongoClient, InsertOne,errors
+from pymongo import MongoClient, InsertOne, errors
 from threading import Thread
 import os
 # mongodb多进程批量插入700W条数据

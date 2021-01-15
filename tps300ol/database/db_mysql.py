@@ -55,11 +55,11 @@ class DeviceThinkModel(MjsThinkModel):
 
 if __name__ == '__main__':
     # 查询最后一条记录的id
-    rows = DeviceThinkModel.select(["id"], where='id is not null order by id desc', limit=1)
-    row = None
-    for r in rows:
-        row = r.id
-    did = row
+    # rows = DeviceThinkModel.select(["id"], where='id is not null order by id desc', limit=1)
+    # row = None
+    # for r in rows:
+    #     row = r.id
+    # did = row
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(now)
     ip1 = 0
@@ -85,10 +85,9 @@ if __name__ == '__main__':
             ip1 = ip1 - 1
         else:
             ip4 = ip4 - 1
-        did += 1
+        # did += 1
         data = {
-            "id": did,
-            "devName": f"devTest{i}",
+            "devName": f"testDev{i}",
             "nodeId": 0,
             "ip": f"{ip4}.{ip3}.{ip2}.{ip1}",
             "typeId": 1,
@@ -105,7 +104,3 @@ if __name__ == '__main__':
             idata = list()
     print('脚本执行完成！')
     os.system('pause')
-
-
-
-
