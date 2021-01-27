@@ -5,6 +5,7 @@ from threading import Thread
 import json
 
 
+
 def tcp(datasocket, ne_ip):
     global switch
     datasocket.settimeout(5.0)
@@ -138,11 +139,11 @@ if __name__ == '__main__':
     tps_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     IP = ''
     while True:
-        port = int(input('请输入监听端口：'))
         try:
+            port = int(input('请输入监听端口：'))
             tps_server.bind((IP, port))
-        except OSError:
-            print("地址无效或者端口被占用，请重新选择")
+        except (OSError, ValueError):
+            print("地址无效或者端口被占用，请重新输入")
             continue
         break
     tps_server.listen(10)

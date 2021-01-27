@@ -44,3 +44,12 @@ tps300ol/test/-.spec
 /tps300ol/test/-.spec
 /tps300ol/.vscode/
 /tps300ol/.idea/
+readcsv/__pycache__/read_csv.cpython-38.pyc
+tps300ol/data/*.json
+tps300ol/database/*.spec
+tps300ol/database/build/
+tps300ol/database/dist/
+tps300ol/test/build/
+tps300ol/test/dist/
+tps300ol/test/*.spec
+**/__pycache__/
