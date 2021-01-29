@@ -112,9 +112,9 @@ if __name__ == '__main__':
     port = 8802
     tps_server.bind((IP, port))
     tps_server.listen()
-    ads = []
-    socks = []
-    addrs = []
+    ads :list  = []
+    socks :list = []
+    addrs :list  = []
     print(f'模拟探针程序启动成功')
     t1 = TpsThread(target=print_ip)
     t2 = TpsThread(target=connect)

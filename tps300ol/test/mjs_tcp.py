@@ -1,8 +1,8 @@
+import json
+import os
 import socket
 from socket import error
-import os
 from threading import Thread
-import json
 
 
 
@@ -160,9 +160,8 @@ if __name__ == '__main__':
                 if nip != need_ip:
                     print(f'{addr[0]}已连接')
                     continue
-                else:
-                    print(f'{addr[0]}已连接！')
-                    break
+                print(f'{addr[0]}已连接！')
+                break
             break
         else:
             print('非法ip，请重新输入！')
