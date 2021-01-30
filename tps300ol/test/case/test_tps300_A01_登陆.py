@@ -3,9 +3,10 @@ import sys
 import allure
 import pytest
 # 调用自己写的模块的时候，需要用到这个代码，不然会报错
-sys.path.append(os.getcwd())
+sys.path.append('../../page')
+sys.path.append('../../../readcsv')
 from page.home import loginPage
-from read_csv import ReadCsv
+from readcsv.read_csv import ReadCsv
 
 
 # 使用前后置函数来获取driver和打开网址

@@ -1,4 +1,4 @@
-from page.base_page import BasePage
+from base_page import BasePage
 from safe_general.alarm_viewPage import AlarmViewPage
 from safe_general.eventPage import EventPage
 from safe_general.logPage import LogPage

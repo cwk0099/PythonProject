@@ -1,5 +1,5 @@
-from page.base_page import BasePage
-from page.running_manager.asset_page import AssetPage
+from base_page import BasePage
+from running_manager.asset_page import AssetPage
 
 class AlarmViewPage(BasePage):
 

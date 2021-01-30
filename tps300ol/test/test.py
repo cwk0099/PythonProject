@@ -1,6 +1,7 @@
 # from selenium import webdriver
 import re
 import json
+import os
 
 # wd = webdriver.Edge()
 # wd.get('http://192.168.0.247:3000')
@@ -33,4 +34,5 @@ print(type(str1))
 data = json.dumps(str1)
 print(type(data))
 print(data)
+print(os.getcwd())
 

@@ -1,4 +1,4 @@
-from page.base_page import BasePage
+from base_page import BasePage
 
 class EventPage(BasePage):
     # 查询列表展示选择按钮
