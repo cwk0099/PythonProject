@@ -33,8 +33,8 @@ while True:
 while True:
     port = input('请输入mysql的端口:')
     try:
-        port = int(port)
-        if 0 > port or port > 65535:
+        po: int = int(port)
+        if 0 > po or po > 65535:
             print('非法端口！')
             continue
     except ValueError:
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     ip1 = 0
     ip2 = 0
     ip3 = 0
-    ip4 = 0
+    ip4 = 1
     idata = list()
     print('正在插入资产数据中')
     for i in range(2000):

@@ -4,19 +4,21 @@ import socket
 from socket import error
 from threading import Thread
 
-
+switch = ''
+stop = True
 
 def tcp(datasocket, ne_ip):
-    global switch
-    datasocket.settimeout(5.0)
+    datasocket.settimeout(3.0)
     while True:
         try:
             while True:
                 try:
                     msg = datasocket.recv(8)
                 except error:
+                    # print(f'switch:{switch}')
                     if switch == 'q':
                         datasocket, ne_ip = switch_ip(datasocket, ne_ip)
+                        datasocket.settimeout(3.0)
                     continue
                     # 心跳检测
                     # response = os.popen("ping -n 1 " + ne_ip).read()
@@ -26,7 +28,6 @@ def tcp(datasocket, ne_ip):
                     #     datasocket, ne_ip = switch_ip(datasocket, ne_ip)
                     #     continue
                 break
-            # noinspection PyUnboundLocalVariable
             ms = bytesToHexString(msg)
             print(f'报文头为：{ms}')
             b = b'\xc2'
@@ -89,6 +90,7 @@ def tcp(datasocket, ne_ip):
 
 def switch_ip(datasocket1, nee_ip):
     global switch
+    switch = 'w'
     print('正在切换连接')
     datasocket1.close()
     if nee_ip == '192.168.0.241':
@@ -103,7 +105,6 @@ def switch_ip(datasocket1, nee_ip):
         if ladd2[0] == nee_ip:
             print(f'{nee_ip}已连接！')
             break
-    switch = ''
     return datasocket1, nee_ip
 
 
@@ -111,7 +112,7 @@ def validate_ip(ipaddr):
     ips = ipaddr.split('.')
     if len(ips) != 4:
         return False
-    for index, ip in enumerate(ips):
+    for ip in ips:
         try:
             int_ip = int(ip)
         except ValueError:
@@ -135,12 +136,13 @@ def checkSwitch():
             return
 
 
+
 if __name__ == '__main__':
     tps_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     IP = ''
     while True:
         try:
-            port = int(input('请输入监听端口：'))
+            port = int(input('请输入本地监听端口：'))
             tps_server.bind((IP, port))
         except (OSError, ValueError):
             print("地址无效或者端口被占用，请重新输入")
@@ -149,7 +151,7 @@ if __name__ == '__main__':
     tps_server.listen(10)
     buff = 1024
     while True:
-        need_ip = input('请输入要连接的ip：')
+        need_ip = input('请输入要连接的堡垒机ip：')
         if validate_ip(need_ip):
             nip = None
             print('正在等待连接...')
@@ -158,15 +160,13 @@ if __name__ == '__main__':
                 ladd = list(addr)
                 nip = ladd[0]
                 if nip != need_ip:
-                    print(f'{addr[0]}已连接')
+                    print(f'{addr[0]}请求连接')
                     continue
                 print(f'{addr[0]}已连接！')
                 break
             break
         else:
             print('非法ip，请重新输入！')
-    switch = ''
-    stop = True
     thread_tcp = Thread(target=tcp, args=(dataSocket, need_ip))
     thread_check = Thread(target=checkSwitch, args=())
     thread_tcp.start()
