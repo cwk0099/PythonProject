@@ -101,9 +101,9 @@ def switch_ip(datasocket1, nee_ip):
     while True:
         datasocket1, addr2 = tps_server.accept()
         ladd2 = list(addr2)
-        print(f'{addr2[0]}已连接')
+        print(f'{addr2[0]}请求连接')
         if ladd2[0] == nee_ip:
-            print(f'{nee_ip}已连接！')
+            print(f'已连接{nee_ip}')
             break
     return datasocket1, nee_ip
 
@@ -162,7 +162,7 @@ if __name__ == '__main__':
                 if nip != need_ip:
                     print(f'{addr[0]}请求连接')
                     continue
-                print(f'{addr[0]}已连接！')
+                print(f'已连接{addr[0]}！')
                 break
             break
         else:
